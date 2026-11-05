@@ -1,6 +1,4 @@
-@import 'tailwindcss';
-@import 'tailwindcss-primeui';
-@tailwind utilities;
+
 
 :root {
     --navy-dark: #0b1f3a;

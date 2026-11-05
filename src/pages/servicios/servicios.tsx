@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../../styles/servicios.css';
 import '../../styles/ServicioModal.css';
-import ServicioModal from '@/componentes/ServicioModal';
+import ServicioModal from '../../componentes/ServicioModal';
 
 interface Servicio {
     id: number;

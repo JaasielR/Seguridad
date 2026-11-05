@@ -1,11 +1,11 @@
-import Inicio from "@/pages/inicio/inicio.tsx";
-import Title from "@/componentes/title.tsx";
-import BasicDemo from "@/componentes/menu.tsx";
+import Inicio from "./pages/inicio/inicio";
+import Title from "./componentes/title";
+import BasicDemo from "./componentes/menu";
 import { Routes, Route } from "react-router-dom";
-import QuiénesSomos from "@/pages/quienes-somos/quienes-somos.tsx";
-import Servicios from "@/pages/servicios/servicios.tsx";
-import VideoVigilancia from "@/pages/video-vigilancia/video-vigilancia.tsx";
-import Contacto from "@/pages/contacto/contacto.tsx";
+import QuiénesSomos from "./pages/quienes-somos/quienes-somos";
+import Servicios from "./pages/servicios/servicios";
+import VideoVigilancia from "./pages/video-vigilancia/video-vigilancia";
+import Contacto from "./pages/contacto/contacto";
 
 function App() {
     return (
