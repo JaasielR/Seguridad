@@ -45,7 +45,7 @@ createRoot(document.getElementById('root')!).render(
     <StrictMode>
                 <div style={{ filter: 'blur(8px)' }} className="background-fondo" />
         <Provider store={store}>
-            <BrowserRouter basename="/app">
+            <BrowserRouter basename="/Seguridad">
                 <div className="background-fondo" style={{ filter: 'blur(8px)' }} />
                 <AppWithLoading />
             </BrowserRouter>

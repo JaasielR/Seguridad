@@ -15,7 +15,7 @@ const servicios: Servicio[] = [
         id: 1,
         titulo: 'Video Vigilancia CCTV',
         descripcion: 'Instalación profesional de sistemas CCTV analógicos e IP, monitoreo 24/7 desde centro de control certificado, cámaras de alta resolución con visión nocturna e infrarroja, grabación en la nube y respaldo local con acceso remoto.',
-        imagen: '/a.jpg'
+        imagen: 'a.jpg'
     },
     {
         id: 2,
