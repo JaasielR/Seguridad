@@ -1,30 +1,54 @@
-import { StrictMode } from 'react'
+import { StrictMode, useState, useEffect } from 'react'
 import { createRoot } from 'react-dom/client'
-import { BrowserRouter } from 'react-router-dom';
-import { Provider } from "react-redux";
-import { store } from "@/app/store";
+import { BrowserRouter, useLocation } from 'react-router-dom'
+import { Provider } from "react-redux"
+import { store } from "@/app/store"
 import App from './App.tsx'
 import './index.css'
 import 'primereact/resources/themes/lara-light-blue/theme.css';
-import 'primereact/resources/primereact.min.css';
-import 'primeicons/primeicons.css';
-import 'aos/dist/aos.css';
-import AOS from 'aos';
+import 'primereact/resources/primereact.min.css'
+import 'primeicons/primeicons.css'
 
+// Componente que maneja la pantalla de carga al cambiar de página
+function AppWithLoading() {
+    const [isLoading, setIsLoading] = useState(false)
+    const location = useLocation()
 
-AOS.init({
-    duration: 800,
-    once: true,
-});
+    useEffect(() => {
+        // Mostrar la pantalla de carga
+        setIsLoading(true)
+
+        // Después de un breve retraso, ocultar la pantalla de carga
+        const timer = setTimeout(() => {
+            setIsLoading(false)
+        }, 400)
+
+        return () => {
+            clearTimeout(timer)
+        }
+    }, [location.pathname])
+
+    return (
+        <>
+            <App />
+            {isLoading && (
+                <div className="loading-overlay" id="loading-overlay">
+                    <div className="loading-spinner"></div>
+                    <div className="loading-text">CARGANDO...</div>
+                </div>
+            )}
+        </>
+    )
+}
 
 createRoot(document.getElementById('root')!).render(
-
     <StrictMode>
+                <div style={{ filter: 'blur(8px)' }} className="background-fondo" />
         <Provider store={store}>
             <BrowserRouter basename="/app">
-                <App />
+                <div className="background-fondo" style={{ filter: 'blur(8px)' }} />
+                <AppWithLoading />
             </BrowserRouter>
         </Provider>
-    </StrictMode>
-
+    </StrictMode>,
 )

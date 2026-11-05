@@ -16,11 +16,10 @@ export default function BusquedaMenu() {
     const navigate = useNavigate();
 
     const opciones: Opcion[] = [
-        { label: "Personajes", ruta: "/personajes" },
-        { label: "Clanes", ruta: "/clanes" },
-        { label: "Aldeas", ruta: "/aldeas" },
-        { label: "Tailed Beasts", ruta: "/tailed-beast" },
-        { label: "Akatsuki", ruta: "/akatsuki" }
+        { label: "Quiénes Somos", ruta: "/quienes-somos" },
+        { label: "Servicios", ruta: "/servicios" },
+        { label: "Video Vigilancia", ruta: "/video-vigilancia" },
+        { label: "Contacto", ruta: "/contacto" }
     ];
 
     const [seleccionado, setSeleccionado] = useState<Opcion | null>(null);
@@ -51,7 +50,7 @@ export default function BusquedaMenu() {
             completeMethod={buscar}
             field="label"
             dropdown
-            placeholder="Buscar..."
+            placeholder="Buscar servicio..."
             onChange={cambiar}
         />
     );

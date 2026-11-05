@@ -8,7 +8,7 @@ import path from 'path';
 // https://vite.dev/config/
 export default defineConfig({
 
-  base: "/app/",
+  base: "/Seguridad/",
 
   resolve: {
     alias: {

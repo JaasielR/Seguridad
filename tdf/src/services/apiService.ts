@@ -1,8 +1,5 @@
-import api from "./api";
-
 export async function getCollection<T>(collection: string): Promise<T> {
-
-    const response = await api.get<T>(`/${collection}`);
-    return response.data;
-
+    // Placeholder - la implementación real usa axios con la URL de la API
+    const response = await fetch(`/api/${collection}`);
+    return response.json();
 }

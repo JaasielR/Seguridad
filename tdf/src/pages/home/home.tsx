@@ -1,27 +1,23 @@
 import React from 'react';
-import '../../styles/home.css'
-import AutoPlayDemo from "@/componentes/panel.tsx";
-import BusquedaMenu from "@/componentes/table.tsx";
+import '../../styles/home.css';
+import { Button } from "primereact/button";
 
 const Home: React.FC = () => {
     return (
-
-        <div className="grid-caja">
-            <aside><AutoPlayDemo/></aside>
-            <section>
-                <div className="hero">
-                    <h1>
-                        ¡DESCUBRE!
-                    </h1>
-                    <p>
-                       Selecciona lo que te gustaria saber acerca del mundo de Naruto
-                    </p>
-                    <BusquedaMenu/>
-                </div>
-            </section>
-
-        </div>
-
+        <section>
+            <div className="hero">
+                <h1>SEGURIDAD INTERNA</h1>
+                <p className="hero-subtitulo">Central de Abastos Ecatepec · Estado de México</p>
+                <p>
+                    Soluciones integrales de seguridad privada para proteger tu negocio
+                </p>
+                <Button
+                    label="Explorar Servicios"
+                    icon="pi pi-arrow-right"
+                    className="explorar-btn"
+                />
+            </div>
+        </section>
     );
 };
 

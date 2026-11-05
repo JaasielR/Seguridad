@@ -1,39 +1,26 @@
-import '../../styles/inicio.css'
+import '../../styles/inicio.css';
 import React from "react";
 import {Button} from "primereact/button";
-import Home from '@/pages/home/home.tsx'
 
 const Inicio: React.FC = () => {
     return (
-        <>
-            <div id="inicio" className="hero">
-                <div data-aos="fade-down">
-                <h1>
-                    TODO SOBRE NARUTO
+        <div id="inicio" className="hero">
+            <div className="hero-contenido">
+                <h1 className="titulo-principal">
+                    SEGURIDAD INTERNA CENTRAL DE ABASTOS
                 </h1>
-                <h1>
-                    ¡DATTEBAYO!
-                </h1>
-
-                    <Button
-                        label="Explorar"
-                        onClick={() => {
-                            document
-                                .getElementById("pagina2")
-                                ?.scrollIntoView({ behavior: "smooth" });
-                        }}
-                    />
-
-                </div>
+                <p className="hero-subtitulo">Central de Abastos Ecatepec · Estado de México</p>
+                <Button
+                    label="Explorar Servicios"
+                    icon="pi pi-arrow-right"
+                    onClick={() => {
+                        document
+                            .getElementById("servicios")
+                            ?.scrollIntoView({ behavior: "smooth" });
+                    }}
+                />
             </div>
-
-            <section id="pagina2">
-                <div data-aos="fade-down">
-                    <Home/>
-                </div>
-            </section>
-        </>
-
+        </div>
     );
 };
 

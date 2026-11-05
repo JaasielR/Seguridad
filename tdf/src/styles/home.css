@@ -1,42 +1,40 @@
-.grid-caja{
-
-    display: grid;
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
     min-height: 100vh;
-    grid-template-columns: [x0] 310px [x1] 310px [x2] 310px [x3] 310px [x4] 310px [x5] ;
-    grid-template-rows: [y0] 70px [y1] 400px [y2] 400px [y3];
-    row-gap: 30px;
-    column-gap: 10px;
-    text-align:center
-
+    background: url("/fondo.jpg") fixed center center / cover no-repeat;
+    background-color: transparent;
+    color: #f0e6c9;
 }
 
-.grid-caja>div{
-
-    background:aliceblue;
-
+.hero h1 {
+    font-size: 4em;
+    margin-bottom: 15px;
+    color: #c9a227;
+    letter-spacing: 5px;
+    text-shadow: 0 0 30px rgba(201, 162, 39, 0.3);
 }
 
-aside {
-    background: transparent;
-    grid-column: x0 / x3;
-    grid-row: y1 / y3;
-    color: #bd3636;
-    justify-self: center;
-    align-self: center;
+.hero-subtitulo {
+    font-size: 1.3em;
+    color: #f0e6c9;
+    font-style: italic;
+    margin-bottom: 20px;
 }
 
-section {
-    background: transparent;
-    grid-column: x3 / x6;
-    grid-row: y1 / y3;
-    justify-self: center;
-    align-self: center;
+.hero p {
+    max-width: 700px;
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #e8d49a;
 }
 
-.fijo {
-    position: fixed;
-    top: 0;
-    right: 0;
-    zIndex: '1000';
+@media (max-width: 900px) {
+    .hero h1 {
+        font-size: 2.5em;
+    }
 }
-
