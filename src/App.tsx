@@ -1,24 +1,50 @@
 import Inicio from "./pages/inicio/inicio";
 import Title from "./componentes/title";
 import BasicDemo from "./componentes/menu";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
 import QuiénesSomos from "./pages/quienes-somos/quienes-somos";
 import Servicios from "./pages/servicios/servicios";
 import VideoVigilancia from "./pages/video-vigilancia/video-vigilancia";
 import Contacto from "./pages/contacto/contacto";
+import WhatsAppButton from "./componentes/WhatsAppButton";
+
+/** Botón destacado del header: lleva al formulario de solicitud/cotización. */
+function CotizacionButton() {
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    const solicitar = () => {
+        if (location.pathname === "/") {
+            document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth" });
+        } else {
+            navigate("/", { state: { scrollTo: "contacto" } });
+        }
+    };
+
+    return (
+        <button
+            onClick={solicitar}
+            className="hidden items-center gap-2 rounded-full border-2 border-brand-700 bg-transparent px-6 py-2.5 text-[0.85rem] font-semibold text-brand-700 transition-all duration-300 hover:border-brand-600 hover:bg-brand-600 hover:text-white sm:inline-flex"
+        >
+            <i className="pi pi-shield" aria-hidden="true" />
+            Solicitar Cotización
+        </button>
+    );
+}
 
 function App() {
     return (
         <>
-            <header className="menu-fijo">
-                <div className="header-grid">
-                    <div className="logo-container">
-                        <h1 className="title">
+            <header className="fixed top-0 left-0 z-[1000] w-full border-b border-brand-100 bg-white/90 shadow-sm backdrop-blur-lg">
+                <div className="mx-auto flex w-full max-w-[1240px] items-center justify-between gap-3 px-4 py-3">
+                    <div className="flex items-center">
+                        <h1 className="m-0">
                             <Title />
                         </h1>
                     </div>
-                    <div className="menu-container">
+                    <div className="flex flex-1 items-center justify-end gap-3">
                         <BasicDemo />
+                        <CotizacionButton />
                     </div>
                 </div>
             </header>
@@ -29,6 +55,9 @@ function App() {
                 <Route path="/video-vigilancia" element={<VideoVigilancia />} />
                 <Route path="/contacto" element={<Contacto />} />
             </Routes>
+
+            {/* Botón flotante de WhatsApp, visible en todas las pantallas */}
+            <WhatsAppButton />
         </>
     );
 }

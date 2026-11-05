@@ -2,3 +2,128 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  /* NOTA: los gradientes de marca se aplican con `background-image` directo
+     (no vía @apply bg-...), porque las utilidades generadas desde
+     theme.extend.backgroundImage no siempre están disponibles para @apply
+     cuando el CLI standalone de Tailwind procesa este archivo. Los valores
+     coinciden con los definidos en tailwind.config.js. */
+
+  /* Acabado de oro bruñido para texto (como títulos del impreso) */
+  .gold-text-fill {
+    background-image: linear-gradient(135deg, #f3e3b3 0%, #cfa247 45%, #a9781f 70%, #e9cf8f 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+  }
+
+  /* Contenedor de página con fondo azul marino y viñeta */
+  .page-shell {
+    @apply flex min-h-screen flex-col px-0 pb-[120px] pt-[30px] text-text-cream;
+    background-image: radial-gradient(120% 120% at 50% 0%, #152a5c 0%, #0a1733 55%, #060f24 100%);
+  }
+
+  /* Encabezado de página */
+  .page-header {
+    @apply px-4 pb-10 pt-[60px] text-center;
+  }
+
+  /* Título tipo "placa dorada sobre azul marino" (como el impreso) */
+  .plate-heading {
+    @apply gold-text-fill inline-block w-fit rounded-[10px] border border-gold-400/40 bg-navy-900/80 px-[22px] py-[15px]
+           text-center text-[2.4em] font-extrabold uppercase tracking-[5px] shadow-plate;
+  }
+
+  .page-subtitle {
+    @apply text-[1.15em] italic tracking-wide text-ivory-100;
+  }
+
+  /* Panel claro con marco verde suave (referencia GYPSE) */
+  .gold-panel {
+    @apply rounded-2xl border border-brand-100 bg-white shadow-[0_10px_40px_rgba(6,20,12,0.08)];
+  }
+
+  /* Bloque de sección a dos columnas (texto + visual) */
+  .split-section {
+    @apply mb-10 flex flex-col items-center justify-between gap-10 rounded-[15px] border border-gold-400/35
+           bg-navy-900/80 p-[50px] text-center shadow-plate md:flex-row md:text-left;
+  }
+
+  /* ===== Panel claro marfil (como la página CCTV del impreso):
+     fondo crema con texto azul marino, para alternar y romper el azul ===== */
+  .ivory-panel {
+    @apply rounded-[15px] border-[3px] border-gold-400/70 bg-ivory-100 text-navy-800 shadow-plate;
+  }
+
+  .ivory-section {
+    @apply mx-4 mb-10 rounded-[15px] border-[3px] border-gold-400/70 bg-ivory-100 px-6 py-12
+           text-center text-navy-800 shadow-plate md:px-12;
+  }
+
+  /* Encabezado oscuro sobre fondo marfil (texto azul marino con filete dorado) */
+  .ivory-heading {
+    @apply mb-3 text-center text-[2.4em] font-extrabold uppercase tracking-[5px] text-navy-700;
+  }
+
+  .ivory-subtitle {
+    @apply text-[1.1em] font-medium tracking-wide text-navy-500;
+  }
+
+  .ivory-title {
+    @apply mb-4 text-[1.6em] font-bold tracking-[2px] text-navy-700;
+  }
+
+  .ivory-text {
+    @apply text-[1.05em] leading-[1.8] text-navy-600;
+  }
+
+  /* Filete decorativo (acento verde de la referencia) */
+  .gold-rule {
+    @apply mx-auto my-5 h-[3px] w-20 rounded;
+    background-image: linear-gradient(90deg, #1B9C85 0%, #009961 100%);
+  }
+
+  .section-title {
+    @apply mb-5 text-[1.8em] tracking-[2px] text-gold-200;
+  }
+
+  .section-heading {
+    @apply gold-text-fill mb-10 text-center text-[2.4em] tracking-[3px];
+  }
+
+  .body-text {
+    @apply text-[1.1em] leading-[1.8] text-ivory-200;
+  }
+
+  /* Recuadro dorado (sello / imagen conceptual) */
+  .gold-box {
+    @apply w-full rounded-[15px] border-2 border-gold-400/70 p-[30px] text-center;
+    background-image: linear-gradient(135deg, #f3e3b3 0%, #cfa247 38%, #a9781f 62%, #e9cf8f 100%);
+  }
+
+  /* Footer fijo de contacto */
+  .site-footer {
+    @apply fixed bottom-0 left-0 z-[999] w-full border-t border-gold-400/30 bg-navy-950 px-4 pb-[18px] pt-[14px] text-center;
+  }
+
+  .site-footer p {
+    @apply text-[0.95em] leading-[1.7] text-navy-100;
+  }
+
+  .site-footer strong {
+    @apply text-gold-200;
+  }
+
+  /* Campos de formulario (tema claro) */
+  .field-label {
+    @apply mb-2 text-[0.88rem] font-medium tracking-wide text-ink-900;
+  }
+
+  .field-input {
+    @apply w-full rounded-lg border border-gray-300 bg-white p-3 text-[1em] text-ink-900
+           transition-all duration-300 placeholder:text-ink-300 focus:border-brand-400
+           focus:ring-2 focus:ring-brand-100 focus:outline-none;
+  }
+}

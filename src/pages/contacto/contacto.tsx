@@ -1,75 +1,77 @@
 import React from 'react';
-import '../../styles/contact.css';
 
 const Contacto: React.FC = () => {
     return (
-        <div className="contacto">
-            <header className="header-contacto">
-                <h1>CONTACTO</h1>
-                <p className="subtitulo">¿Necesita servicios de seguridad? Contáctenos</p>
+        <div className="page-shell">
+            <header className="page-header">
+                <h1 className="plate-heading">CONTACTO</h1>
+                <p className="page-subtitle mt-4">¿Necesita servicios de seguridad? Contáctenos</p>
             </header>
 
-            <section className="seccion-contacto">
-                <div className="contacto-info">
-                    <div className="info-item">
-                        <span className="info-icono">📞</span>
+            <section className="mx-auto flex max-w-[1200px] flex-wrap gap-10 px-4 py-10">
+                <div className="flex flex-[1_1_400px] flex-col gap-5">
+                    <div className="flex items-center gap-5 rounded-[10px] border border-gold-400/40 bg-navy-panel p-5 shadow-plate">
+                        <span className="flex-shrink-0 text-[2em]">📞</span>
                         <div>
-                            <span className="info-etiqueta">Teléfono</span>
-                            <strong className="info-valor">5529188467</strong>
+                            <span className="mb-[5px] block text-[0.9em] tracking-wide text-ivory-100">Teléfono</span>
+                            <strong className="block text-[1.2em] font-bold text-gold-200">5529188467</strong>
                         </div>
                     </div>
-                    <div className="info-item">
-                        <span className="info-icono">👤</span>
+                    <div className="flex items-center gap-5 rounded-[10px] border border-gold-400/40 bg-navy-panel p-5 shadow-plate">
+                        <span className="flex-shrink-0 text-[2em]">👤</span>
                         <div>
-                            <span className="info-etiqueta">Director</span>
-                            <strong className="info-valor">Lic. Eusebio Ortega</strong>
+                            <span className="mb-[5px] block text-[0.9em] tracking-wide text-ivory-100">Director</span>
+                            <strong className="block text-[1.2em] font-bold text-gold-200">Lic. Eusebio Ortega</strong>
                         </div>
                     </div>
-                    <div className="info-item">
-                        <span className="info-icono">📍</span>
+                    <div className="flex items-center gap-5 rounded-[10px] border border-gold-400/40 bg-navy-panel p-5 shadow-plate">
+                        <span className="flex-shrink-0 text-[2em]">📍</span>
                         <div>
-                            <span className="info-etiqueta">Ubicación</span>
-                            <strong className="info-valor">Ecatepec, Estado de México</strong>
+                            <span className="mb-[5px] block text-[0.9em] tracking-wide text-ivory-100">Ubicación</span>
+                            <strong className="block text-[1.2em] font-bold text-gold-200">Ecatepec, Estado de México</strong>
                         </div>
                     </div>
-                    <div className="info-item">
-                        <span className="info-icono">🕐</span>
+                    <div className="flex items-center gap-5 rounded-[10px] border border-gold-400/40 bg-navy-panel p-5 shadow-plate">
+                        <span className="flex-shrink-0 text-[2em]">🕐</span>
                         <div>
-                            <span className="info-etiqueta">Horario</span>
-                            <strong className="info-valor">24/7</strong>
+                            <span className="mb-[5px] block text-[0.9em] tracking-wide text-ivory-100">Horario</span>
+                            <strong className="block text-[1.2em] font-bold text-gold-200">24/7</strong>
                         </div>
                     </div>
                 </div>
 
-                <div className="contacto-formulario">
-                    <form className="formulario">
-                        <div className="formulario-grupo">
-                            <label htmlFor="nombre">Nombre</label>
+                <div className="gold-panel flex-[1_1_500px] p-[30px] max-[700px]:p-5">
+                    <form className="flex flex-col gap-5">
+                        <div className="flex flex-col">
+                            <label htmlFor="nombre" className="field-label">Nombre</label>
                             <input
                                 type="text"
                                 id="nombre"
                                 placeholder="Ingrese su nombre"
+                                className="field-input"
                             />
                         </div>
-                        <div className="formulario-grupo">
-                            <label htmlFor="email">Correo Electrónico</label>
+                        <div className="flex flex-col">
+                            <label htmlFor="email" className="field-label">Correo Electrónico</label>
                             <input
                                 type="email"
                                 id="email"
                                 placeholder="su@correo.com"
+                                className="field-input"
                             />
                         </div>
-                        <div className="formulario-grupo">
-                            <label htmlFor="telefono">Teléfono</label>
+                        <div className="flex flex-col">
+                            <label htmlFor="telefono" className="field-label">Teléfono</label>
                             <input
                                 type="tel"
                                 id="telefono"
                                 placeholder="55 1234 5678"
+                                className="field-input"
                             />
                         </div>
-                        <div className="formulario-grupo">
-                            <label htmlFor="servicio">Servicio de interés</label>
-                            <select id="servicio">
+                        <div className="flex flex-col">
+                            <label htmlFor="servicio" className="field-label">Servicio de interés</label>
+                            <select id="servicio" className="field-input">
                                 <option value="">Seleccione un servicio</option>
                                 <option value="cctv">Video Vigilancia CCTV</option>
                                 <option value="motopatrullas">Motopatrullas</option>
@@ -79,22 +81,23 @@ const Contacto: React.FC = () => {
                                 <option value="proteccion">Protección a Directivos</option>
                             </select>
                         </div>
-                        <div className="formulario-grupo">
-                            <label htmlFor="mensaje">Mensaje</label>
+                        <div className="flex flex-col">
+                            <label htmlFor="mensaje" className="field-label">Mensaje</label>
                             <textarea
                                 id="mensaje"
                                 rows={5}
                                 placeholder="Explique su necesidad de seguridad..."
+                                className="field-input min-h-[120px] resize-y"
                             ></textarea>
                         </div>
-                        <button type="submit" className="btn-enviar">
+                        <button type="submit" className="cursor-pointer rounded-lg border border-gold-400/60 bg-gold-sheen px-10 py-[15px] text-[1.05em] font-bold uppercase tracking-[2px] text-navy-900 shadow-gold transition-all duration-300 hover:-translate-y-[3px] hover:shadow-gold-lg">
                             Enviar Mensaje
                         </button>
                     </form>
                 </div>
             </section>
 
-            <footer className="footer-servicios">
+            <footer className="site-footer">
                 <p>Para más información, contacte al <strong>Lic. Eusebio Ortega</strong> al <strong>5529188467</strong></p>
                 <p>Director Operativo · Central de Abastos Ecatepec, Estado de México</p>
             </footer>

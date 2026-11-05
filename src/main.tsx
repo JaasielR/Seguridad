@@ -30,9 +30,12 @@ function AppWithLoading() {
         <>
             <App />
             {isLoading && (
-                <div className="loading-overlay" id="loading-overlay">
+                <div
+                    id="loading-overlay"
+                    className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-white/70 backdrop-blur-[10px] transition-opacity duration-1000 ease-out"
+                >
                     <div className="loading-spinner"></div>
-                    <div className="loading-text">CARGANDO...</div>
+                    <div className="font-heading text-base font-bold tracking-[4px] text-brand-700">CARGANDO...</div>
                 </div>
             )}
         </>
@@ -41,10 +44,8 @@ function AppWithLoading() {
 
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
-                <div style={{ filter: 'blur(8px)' }} className="background-fondo" />
         <Provider store={store}>
             <BrowserRouter basename="/Seguridad">
-                <div className="background-fondo" style={{ filter: 'blur(8px)' }} />
                 <AppWithLoading />
             </BrowserRouter>
         </Provider>

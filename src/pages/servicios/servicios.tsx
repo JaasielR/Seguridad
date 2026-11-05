@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import '../../styles/servicios.css';
-import '../../styles/ServicioModal.css';
 import ServicioModal from '../../componentes/ServicioModal';
 
 interface Servicio {
@@ -61,16 +59,16 @@ const Servicios: React.FC = () => {
     };
 
     return (
-        <div className="servicios">
-            <header className="header-servicios">
-                <h1>Nuestros Servicios</h1>
+        <div className="page-shell">
+            <header className="page-header">
+                <h1 className="plate-heading">Nuestros Servicios</h1>
             </header>
 
-            <section className="servicios-grid">
+            <section className="mx-auto grid max-w-[1400px] grid-cols-1 gap-[30px] px-4 py-10 sm:grid-cols-[repeat(auto-fit,minmax(350px,1fr))]">
                 {servicios.map((servicio) => (
                     <div
                         key={servicio.id}
-                        className="servicio-card"
+                        className="group relative flex h-full min-h-[180px] cursor-pointer flex-col items-center justify-center overflow-hidden rounded-[15px] border border-gold-400/50 bg-navy-panel p-6 text-center shadow-plate transition-all duration-300 hover:-translate-y-2 hover:border-gold-300 hover:shadow-gold-lg"
                         onClick={() => abrirServicio(servicio.id)}
                         role="button"
                         tabIndex={0}
@@ -80,7 +78,9 @@ const Servicios: React.FC = () => {
                             }
                         }}
                     >
-                        <h3 className="servicio-titulo">{servicio.titulo}</h3>
+                        <span className="absolute inset-x-0 top-0 h-[3px] bg-gold-bar opacity-80"></span>
+                        <h3 className="relative z-[1] text-[1.4em] font-extrabold uppercase leading-[1.4] tracking-[2px] gold-text-fill">{servicio.titulo}</h3>
+                        <span className="relative z-[1] mt-3 text-[0.8em] uppercase tracking-[3px] text-ivory-300 transition-colors group-hover:text-gold-200">Ver detalle</span>
                     </div>
                 ))}
             </section>
@@ -98,7 +98,7 @@ const Servicios: React.FC = () => {
                 onCerrar={cerrarServicio}
             />
 
-            <footer className="footer-servicios">
+            <footer className="site-footer">
                 <p>Para más información, contacte al <strong>Lic. Eusebio Ortega</strong> al <strong>5529188467</strong></p>
                 <p>Director Operativo · Central de Abastos Ecatepec, Estado de México</p>
             </footer>
