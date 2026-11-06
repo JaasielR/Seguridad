@@ -27,12 +27,12 @@ const ServicioModal: React.FC<ServicioModalProps> = ({ servicio, esAbierto, onCe
                     <h2 className="m-0 font-heading text-[1.5rem] font-bold text-ink-900">{servicio.titulo}</h2>
                     <button className="cursor-pointer border-none bg-transparent px-2 text-[2.5rem] leading-none text-ink-500 transition-colors duration-200 hover:text-brand-700" onClick={onCerrar}>&times;</button>
                 </div>
-                <div className="flex flex-wrap gap-8 p-8">
-                    <div className="min-w-[280px] flex-1 overflow-hidden rounded-xl border border-gray-100 shadow-sm">
+                <div className="flex flex-wrap gap-6 p-6 sm:gap-8 sm:p-8">
+                    <div className="min-w-[200px] w-[45%] flex-shrink-0 overflow-hidden rounded-xl border border-gray-100 shadow-sm sm:min-w-[280px] sm:w-[40%] xl:min-w-[320px] xl:w-[35%]">
                         <img className="block h-full w-full rounded-xl object-cover" src={servicio.imagen} alt={servicio.titulo} />
                     </div>
-                    <div className="min-w-[280px] flex-1 px-4">
-                        <p className="text-[1.05rem] leading-[1.8] text-ink-500">{servicio.descripcion}</p>
+                    <div className="min-w-[200px] flex-1 px-2 sm:min-w-[280px] sm:flex-1 sm:px-4">
+                        <p className="text-[0.9rem] leading-[1.6] text-ink-500 sm:text-[1.05rem] sm:leading-[1.8]">{servicio.descripcion}</p>
                     </div>
                 </div>
             </div>

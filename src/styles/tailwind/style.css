@@ -679,6 +679,7 @@ video {
      fondo crema con texto azul marino, para alternar y romper el azul ===== */
 
 .ivory-section {
+  color: #0f2048;
   margin-left: 1rem;
   margin-right: 1rem;
   margin-bottom: 2.5rem;
@@ -709,6 +710,7 @@ video {
 /* Encabezado oscuro sobre fondo marfil (texto azul marino con filete dorado) */
 
 .ivory-heading {
+  color: #0f2048;
   margin-bottom: 0.75rem;
   text-align: center;
   font-size: 2.4em;
@@ -720,6 +722,7 @@ video {
 }
 
 .ivory-title {
+  color: #0f2048;
   margin-bottom: 1rem;
   font-size: 1.6em;
   font-weight: 700;
@@ -767,6 +770,16 @@ video {
   text-align: center;
   font-size: 2.4em;
   letter-spacing: 3px;
+}
+
+/* ===== Colores de marca (azul marino + oro) ===== */
+
+.text-gold-100 {
+  color: #f3e3b3;
+}
+
+.text-navy-800 {
+  color: #0f2048;
 }
 
 .body-text {
@@ -869,6 +882,24 @@ video {
   --tw-ring-color: rgb(212 243 215 / var(--tw-ring-opacity, 1));
 }
 
+/* Animación de entrada de barra lateral desde la derecha */
+
+.slide-in-right {
+  animation: slideInRight 0.3s ease-out forwards;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 .visible {
   visibility: visible;
 }
@@ -918,12 +949,20 @@ video {
   right: 0px;
 }
 
+.right-4 {
+  right: 1rem;
+}
+
 .right-5 {
   right: 1.25rem;
 }
 
 .top-0 {
   top: 0px;
+}
+
+.top-4 {
+  top: 1rem;
 }
 
 .z-\[1000\] {
@@ -1100,6 +1139,10 @@ video {
   height: 1.75rem;
 }
 
+.h-8 {
+  height: 2rem;
+}
+
 .h-9 {
   height: 2.25rem;
 }
@@ -1114,6 +1157,10 @@ video {
 
 .h-full {
   height: 100%;
+}
+
+.h-screen {
+  height: 100vh;
 }
 
 .max-h-\[85vh\] {
@@ -1178,6 +1225,10 @@ video {
 
 .w-7 {
   width: 1.75rem;
+}
+
+.w-8 {
+  width: 2rem;
 }
 
 .w-9 {
@@ -1374,6 +1425,10 @@ video {
 
 .items-center {
   align-items: center;
+}
+
+.justify-start {
+  justify-content: flex-start;
 }
 
 .justify-end {
@@ -1608,6 +1663,11 @@ video {
   background-color: rgb(254 242 242 / var(--tw-bg-opacity, 1));
 }
 
+.bg-teal-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(20 184 166 / var(--tw-bg-opacity, 1));
+}
+
 .bg-transparent {
   background-color: transparent;
 }
@@ -1737,6 +1797,11 @@ video {
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+}
+
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 
 .px-4 {
@@ -2158,6 +2223,11 @@ video {
   color: rgb(25 90 66 / var(--tw-text-opacity, 1));
 }
 
+.text-brand-900 {
+  --tw-text-opacity: 1;
+  color: rgb(6 20 12 / var(--tw-text-opacity, 1));
+}
+
 .text-gold-100 {
   --tw-text-opacity: 1;
   color: rgb(243 227 179 / var(--tw-text-opacity, 1));
@@ -2254,6 +2324,12 @@ video {
   opacity: 0.8;
 }
 
+.shadow-2xl {
+  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .shadow-\[0_20px_60px_rgba\(6\2c 20\2c 12\2c 0\.25\)\] {
   --tw-shadow: 0 20px 60px rgba(6,20,12,0.25);
   --tw-shadow-colored: 0 20px 60px var(--tw-shadow-color);
@@ -2316,6 +2392,11 @@ video {
 .shadow-brand-900\/30 {
   --tw-shadow-color: rgb(6 20 12 / 0.3);
   --tw-shadow: var(--tw-shadow-colored);
+}
+
+.brightness-\[0\.3\] {
+  --tw-brightness: brightness(0.3);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .filter {
@@ -2453,6 +2534,19 @@ video {
   background-color: rgb(0 153 97 / var(--tw-bg-opacity, 1));
 }
 
+.hover\:bg-gold-400\/10:hover {
+  background-color: rgb(207 162 71 / 0.1);
+}
+
+.hover\:bg-gold-400\/20:hover {
+  background-color: rgb(207 162 71 / 0.2);
+}
+
+.hover\:bg-navy-700:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(15 32 72 / var(--tw-bg-opacity, 1));
+}
+
 .hover\:bg-white\/10:hover {
   background-color: rgb(255 255 255 / 0.1);
 }
@@ -2587,10 +2681,6 @@ video {
 }
 
 @media (min-width: 640px) {
-  .sm\:inline-flex {
-    display: inline-flex;
-  }
-
   .sm\:w-auto {
     width: auto;
   }
@@ -2699,9 +2789,17 @@ video {
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1250px) {
   .lg\:col-span-2 {
     grid-column: span 2 / span 2;
+  }
+
+  .lg\:block {
+    display: block;
+  }
+
+  .lg\:hidden {
+    display: none;
   }
 
   .lg\:grid-cols-3 {

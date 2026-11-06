@@ -37,7 +37,7 @@
   }
 
   .page-subtitle {
-    @apply text-[1.15em] italic tracking-wide text-ivory-100;
+    @apply text-[1.15em] italic tracking-wide text-ivory-100;;
   }
 
   /* Panel claro con marco verde suave (referencia GYPSE) */
@@ -93,6 +93,23 @@
     @apply gold-text-fill mb-10 text-center text-[2.4em] tracking-[3px];
   }
 
+  /* ===== Colores de marca (azul marino + oro) ===== */
+  .bg-navy-900 {
+    background-color: #060f24;
+  }
+
+  .text-gold-100 {
+    color: #f3e3b3;
+  }
+
+  .text-navy-700 {
+    color: #0f2048;
+  }
+
+  .text-navy-800 {
+    color: #0f2048;
+  }
+
   .body-text {
     @apply text-[1.1em] leading-[1.8] text-ivory-200;
   }
@@ -125,5 +142,21 @@
     @apply w-full rounded-lg border border-gray-300 bg-white p-3 text-[1em] text-ink-900
            transition-all duration-300 placeholder:text-ink-300 focus:border-brand-400
            focus:ring-2 focus:ring-brand-100 focus:outline-none;
+  }
+
+  /* Animación de entrada de barra lateral desde la derecha */
+  .slide-in-right {
+    animation: slideInRight 0.3s ease-out forwards;
+  }
+
+  @keyframes slideInRight {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
   }
 }

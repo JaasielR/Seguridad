@@ -171,16 +171,23 @@ a:hover {
   gap: 1.5rem;
 }
 
-@media (max-width: 980px) {
+@media (max-width: 960px) {
   .p-megamenu {
     width: 100%;
   }
+
   .p-megamenu-panel {
     border-radius: 0;
   }
+
   .p-megamenu .p-menuitem-link {
     font-size: 0.8rem;
     padding: .4rem .8rem;
+  }
+
+  /* Menú móvil: mostrar solo íconos (sin texto) en el menú principal */
+  .p-megamenu-root-list .p-menuitem-text {
+    display: none;
   }
 }
 

@@ -1,6 +1,7 @@
 import Inicio from "./pages/inicio/inicio";
 import Title from "./componentes/title";
-import BasicDemo from "./componentes/menu";
+import DesktopMenu from "./componentes/desktopMenu";
+import MobileMenu from "./componentes/menu";
 import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
 import QuiénesSomos from "./pages/quienes-somos/quienes-somos";
 import Servicios from "./pages/servicios/servicios";
@@ -24,7 +25,7 @@ function CotizacionButton() {
     return (
         <button
             onClick={solicitar}
-            className="hidden items-center gap-2 rounded-full border-2 border-brand-700 bg-transparent px-6 py-2.5 text-[0.85rem] font-semibold text-brand-700 transition-all duration-300 hover:border-brand-600 hover:bg-brand-600 hover:text-white sm:inline-flex"
+            className="hidden items-center gap-2 rounded-full border-2 border-brand-700 bg-transparent px-6 py-2.5 text-[0.85rem] font-semibold text-brand-700 transition-all duration-300 hover:border-brand-600 hover:bg-brand-600 hover:text-white min-[1250px]:inline-flex"
         >
             <i className="pi pi-shield" aria-hidden="true" />
             Solicitar Cotización
@@ -43,7 +44,8 @@ function App() {
                         </h1>
                     </div>
                     <div className="flex flex-1 items-center justify-end gap-3">
-                        <BasicDemo />
+                        <DesktopMenu />
+                        <MobileMenu />
                         <CotizacionButton />
                     </div>
                 </div>
