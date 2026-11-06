@@ -5,11 +5,10 @@ const MENU_ITEMS = [
   { label: "Inicio", icon: "pi pi-home", section: "inicio" },
   { label: "Quiénes somos", icon: "pi pi-id-card", section: "quienes-somos" },
   { label: "Servicios", icon: "pi pi-user", section: "servicios" },
-  { label: "Bolsa de Trabajo", icon: "pi pi-briefcase", section: "bolsa-trabajo" },
-  { label: "Legalidad", icon: "pi pi-shield", section: "cumplimiento" },
   { label: "Compromiso", icon: "pi pi-check", section: "beneficios" },
-  { label: "Testimonios", icon: "pi pi-comment", section: "testimonios" },
   { label: "Relaciones de confianza", icon: "pi pi-users", section: "clientes" },
+  { label: "Testimonios", icon: "pi pi-comment", section: "testimonios" },
+  { label: "Legalidad", icon: "pi pi-shield", section: "cumplimiento" },
   { label: "Contacto", icon: "pi pi-phone", section: "contacto" },
 ];
 

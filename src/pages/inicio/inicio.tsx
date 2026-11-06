@@ -1,20 +1,19 @@
 import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import HeroSection from "../../componentes/landing/HeroSection";
-import ServiciosSection from "../../componentes/landing/ServiciosSection";
 import QuienesSomos from "../../componentes/landing/QuienesSomos";
-import Cumplimiento from "../../componentes/landing/Cumplimiento";
-import BolsaTrabajo from "../../componentes/landing/BolsaTrabajo";
-import Clientes from "../../componentes/landing/Clientes";
+import ServiciosSection from "../../componentes/landing/ServiciosSection";
 import Beneficios from "../../componentes/landing/Beneficios";
+import Clientes from "../../componentes/landing/Clientes";
 import Testimonios from "../../componentes/landing/Testimonios";
+import Cumplimiento from "../../componentes/landing/Cumplimiento";
 import FormularioContacto from "../../componentes/landing/FormularioContacto";
 import SiteFooter from "../../componentes/landing/SiteFooter";
 
 /**
  * Página de INICIO: landing corporativa completa de una sola página.
- * Compone todas las secciones solicitadas en orden, respetando la
- * identidad de marca (azul marino + oro) del proyecto.
+ * Compone todas las secciones en el orden que maximiza interés y conversión:
+ * Hero -> Quiénes somos -> Servicios -> Compromiso -> Relaciones de confianza -> Testimonios -> Legalidad -> Contacto.
  */
 const Inicio: React.FC = () => {
     const location = useLocation();
@@ -34,13 +33,12 @@ const Inicio: React.FC = () => {
     return (
         <main className="relative">
             <HeroSection />
-            <ServiciosSection />
             <QuienesSomos />
-            <Cumplimiento />
-            <BolsaTrabajo />
-            <Clientes />
+            <ServiciosSection />
             <Beneficios />
+            <Clientes />
             <Testimonios />
+            <Cumplimiento />
             <FormularioContacto />
             <SiteFooter />
         </main>
