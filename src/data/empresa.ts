@@ -40,6 +40,8 @@ export const whatsappLink = (mensaje: string = WHATSAPP_MENSAJE): string =>
 export interface ServicioInfo {
     id: number;
     icono: string;
+    /** Icono ilustrado (PNG con badge circular) alojado en /public/ref/1. */
+    iconoImagen: string;
     titulo: string;
     resumen: string;
     imagen: string;
@@ -50,50 +52,56 @@ export const SERVICIOS: ServicioInfo[] = [
     {
         id: 1,
         icono: "pi pi-video",
+        iconoImagen: "ref/1/cctv.png",
         titulo: "Video Vigilancia CCTV",
         resumen:
             "Sistemas CCTV analógicos e IP con monitoreo 24/7 desde centro de control certificado, cámaras de alta resolución con visión nocturna e infrarroja.",
-        imagen: "a.jpg",
+        imagen: "public/ref/1/cctv.png",
     },
     {
         id: 2,
         icono: "pi pi-building",
+        iconoImagen: "ref/1/guardia.png",
         titulo: "Guardia Intramuros",
         resumen:
             "Protección, control y reacción al interior de las instalaciones: control de accesos, identificación de amenazas, rondines constantes y primeros auxilios.",
-        imagen: "e.jpg",
+        imagen: "ref/1/guardia.png",
     },
     {
         id: 3,
         icono: "pi pi-box",
+        iconoImagen: "ref/1/custodia.png",
         titulo: "Custodia de Mercancía",
         resumen:
             "Custodia de mercancía dentro y fuera de la Central, traslados seguros con unidades equipadas con torreta, faro buscador nocturno y monitoreo 24/7.",
-        imagen: "f.jpg",
+        imagen: "ref/1/custodia.png",
     },
     {
         id: 4,
         icono: "pi pi-user",
+        iconoImagen: "ref/1/personas.png",
         titulo: "Protección a Personas",
         resumen:
             "Escolta y protección ejecutiva a locatarios y directivos, acompañamiento en traslado de valores y nómina, con protocolos de evacuación y rutas seguras.",
-        imagen: "d.jpg",
+        imagen: "ref/1/personas.png",
     },
     {
         id: 5,
         icono: "pi pi-car",
+        iconoImagen: "ref/1/motopatrullas.png",
         titulo: "Motopatrullas DM 250",
         resumen:
             "Unidades motocicletas para patrullaje en andenes y zonas de carga, respuesta inmediata ante incidentes y prevención de robo a carga y transporte.",
-        imagen: "c.jpg",
+        imagen: "ref/1/motopatrullas.png",
     },
     {
         id: 6,
         icono: "pi pi-moon",
+        iconoImagen: "ref/1/nocturnos.png",
         titulo: "Recorridos Nocturnos Perimetrales",
         resumen:
             "Recorridos constantes del perímetro, vigilancia de bardas y accesos, detección de personas sospechosas y bitácora de novedades cada hora con fotografías.",
-        imagen: "b.jpg",
+        imagen: "ref/1/nocturnos.png",
     },
 ];
 

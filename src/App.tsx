@@ -5,6 +5,7 @@ import MobileMenu from "./componentes/menu";
 import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
 import QuiénesSomos from "./pages/quienes-somos/quienes-somos";
 import Servicios from "./pages/servicios/servicios";
+import ServicioDetalle from "./pages/servicios/servicio-detalle";
 import VideoVigilancia from "./pages/video-vigilancia/video-vigilancia";
 import Contacto from "./pages/contacto/contacto";
 import WhatsAppButton from "./componentes/WhatsAppButton";
@@ -37,7 +38,7 @@ function App() {
     return (
         <>
             <header className="fixed top-0 left-0 z-[1000] w-full border-b border-brand-100 bg-white/90 shadow-sm backdrop-blur-lg">
-                <div className="mx-auto flex w-full max-w-[1240px] items-center justify-between gap-3 px-4 py-3">
+                <div className="flex w-full items-center justify-between gap-3 px-4 py-3 sm:px-6 xl:px-10">
                     <div className="flex items-center">
                         <h1 className="m-0">
                             <Title />
@@ -54,6 +55,7 @@ function App() {
                 <Route path="/" element={<Inicio />} />
                 <Route path="/quienes-somos" element={<QuiénesSomos />} />
                 <Route path="/servicios" element={<Servicios />} />
+                <Route path="/servicios/:id" element={<ServicioDetalle />} />
                 <Route path="/video-vigilancia" element={<VideoVigilancia />} />
                 <Route path="/contacto" element={<Contacto />} />
             </Routes>

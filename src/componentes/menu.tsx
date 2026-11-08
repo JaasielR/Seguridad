@@ -1,22 +1,36 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+import { irASeccion } from "./irASeccion";
 
 const MENU_ITEMS = [
   { label: "Inicio", icon: "pi pi-home", section: "inicio" },
   { label: "Quiénes somos", icon: "pi pi-id-card", section: "quienes-somos" },
   { label: "Servicios", icon: "pi pi-user", section: "servicios" },
+  { label: "Contacto", icon: "pi pi-phone", section: "contacto" },
+];
+
+const MENU_EXTRA = [
   { label: "Compromiso", icon: "pi pi-check", section: "beneficios" },
   { label: "Relaciones de confianza", icon: "pi pi-users", section: "clientes" },
   { label: "Testimonios", icon: "pi pi-comment", section: "testimonios" },
   { label: "Legalidad", icon: "pi pi-shield", section: "cumplimiento" },
-  { label: "Contacto", icon: "pi pi-phone", section: "contacto" },
 ];
 
 export default function MobileMenu() {
   const navigate = useNavigate();
+  const location = useLocation();
   const [abierto, setAbierto] = useState(false);
+  const [masAbierto, setMasAbierto] = useState(false);
 
-  const cerrar = () => setAbierto(false);
+  const cerrar = () => {
+    setAbierto(false);
+    setMasAbierto(false);
+  };
+
+  const irA = (section: string) => {
+    irASeccion(navigate, location.pathname, section);
+    cerrar();
+  };
 
   return (
     <>
@@ -65,10 +79,7 @@ export default function MobileMenu() {
             {MENU_ITEMS.map((item) => (
               <button
                 key={item.section}
-                onClick={() => {
-                  document.getElementById(item.section)?.scrollIntoView({ behavior: "smooth" });
-                  cerrar();
-                }}
+                onClick={() => irA(item.section)}
                 className="w-full flex items-left justify-start gap-4 px-5 py-4 text-white hover:bg-gold-400/10 hover:text-white transition-colors bg-brand-900"
               >
                 <i className={item.icon} />
@@ -76,17 +87,37 @@ export default function MobileMenu() {
               </button>
             ))}
 
+            {/* Desplegable con el resto de secciones */}
+            <button
+              onClick={() => setMasAbierto((previo) => !previo)}
+              className="w-full flex items-center justify-between gap-4 px-5 py-4 text-white hover:bg-gold-400/10 hover:text-white transition-colors bg-brand-900"
+              aria-expanded={masAbierto}
+            >
+              <span className="flex items-center gap-4">
+                <i className="pi pi-ellipsis-h" />
+                <span className="leading-tight">Más</span>
+              </span>
+              <i className={`pi ${masAbierto ? "pi-chevron-up" : "pi-chevron-down"} text-sm`} />
+            </button>
+
+            {masAbierto && (
+              <div className="flex flex-col border-l-2 border-gold-400/40 ml-5">
+                {MENU_EXTRA.map((item) => (
+                  <button
+                    key={item.section}
+                    onClick={() => irA(item.section)}
+                    className="w-full flex items-left justify-start gap-4 px-5 py-3 text-white hover:bg-gold-400/10 hover:text-white transition-colors bg-brand-900"
+                  >
+                    <i className={item.icon} />
+                    <span className="leading-tight">{item.label}</span>
+                  </button>
+                ))}
+              </div>
+            )}
+
             {/* Sección: Cotización */}
             <button
-              onClick={() => {
-                const cont = document.getElementById("contacto");
-                if (cont) {
-                  cont.scrollIntoView({ behavior: "smooth" });
-                } else {
-                  navigate("/contacto");
-                }
-                cerrar();
-              }}
+              onClick={() => irA("contacto")}
               className="w-full flex items-center justify-center gap-3 px-3 py-6 text-base font-bold text-white bg-brand-900 hover:bg-navy-700 transition-colors"
             >
               <i className="pi pi-send" />

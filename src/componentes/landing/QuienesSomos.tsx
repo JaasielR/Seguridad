@@ -17,14 +17,14 @@ const QuienesSomos: React.FC = () => {
                         Quiénes somos
                     </span>
                     <h2 className="mb-5 font-heading text-[2rem] font-bold leading-tight text-ink-900 sm:text-[2.6rem]">
-                        Nuestra misión es proteger y servir.
+                        Seguridad integral para proteger lo que más importa.
                     </h2>
                     <p className="text-[1.05rem] leading-[1.9] text-ink-500">
-                         <strong className="text-brand-700">
-                             Garantizar la seguridad y protección de nuestros clientes
-                         </strong> mediante soluciones integrales de seguridad privada, apoyadas en personal confiable,
-                        capacitación continua y excelencia operativa, contribuyendo al desarrollo seguro de sus
-                        actividades comerciales.
+                        <strong className="text-brand-700">Grupo SICAE</strong> es una empresa mexicana especializada en
+                        seguridad privada. Con presencia en la Central de Abastos de Ecatepec, integramos personal
+                        altamente capacitado, tecnología de vigilancia y protocolos operativos certificados para
+                        proteger a las personas, las instalaciones y las mercancías de nuestros clientes. Ofrecemos
+                        soluciones a la medida, respuesta oportuna y acompañamiento permanente los 365 días del año.
                     </p>
 
                     {/* Chips de valores (estilo GYPSE) */}
@@ -48,7 +48,7 @@ const QuienesSomos: React.FC = () => {
                             icono: "pi pi-flag",
                             titulo: "Misión",
                             texto:
-                                "Proveer seguridad integral con personal capacitado y confiable, protegiendo a locatarios, directivos y mercancías de la Central con un desempeño operativo de excelencia.",
+                                "Garantizar la seguridad y protección de nuestros clientes mediante soluciones integrales de seguridad privada, apoyadas en personal confiable, capacitación continua y excelencia operativa, contribuyendo al desarrollo seguro de sus actividades comerciales.",
                         },
                         {
                             icono: "pi pi-compass",

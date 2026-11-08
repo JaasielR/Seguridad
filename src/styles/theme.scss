@@ -191,6 +191,88 @@ a:hover {
   }
 }
 
+/* ===== Overrides de PrimeReact Menubar (header claro - referencia GYPSE) ===== */
+.p-menubar {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  border-radius: 0;
+  width: auto;
+}
+
+.p-menubar-root-list {
+  gap: .25rem;
+}
+
+.p-menubar .p-menuitem-link {
+  display: flex;
+  align-items: center;
+  gap: .3rem;
+  padding: .5rem .9rem;
+  color: #0F172A;
+  background: transparent;
+  border-radius: 9999px;
+  transition: all .25s ease;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: .02em;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.p-menubar .p-menuitem-link:hover {
+  background: #EDF6EE;
+  color: #178E79;
+}
+
+.p-menubar .p-menuitem-icon {
+  color: #1B9C85;
+  font-size: 1rem;
+}
+
+.p-menubar .p-submenu-icon {
+  color: #1B9C85;
+  font-size: 1rem;
+}
+
+.p-menubar .p-submenu-list {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: .5rem;
+  background: #ffffff;
+  border: 1px solid #D4F3D7;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(6, 20, 12, 0.12);
+  padding: .6rem;
+  min-width: 15rem;
+  z-index: 1001;
+}
+
+.p-menubar .p-submenu-list .p-menuitem-text {
+  color: #0F172A;
+  font-size: 0.9rem;
+}
+
+.p-menubar .p-submenu-list .p-menuitem-link {
+  border-radius: .4rem;
+  padding: .7rem 1rem;
+  color: #0F172A;
+  font-size: 0.9rem;
+}
+
+.p-menubar .p-submenu-list .p-menuitem-link:hover {
+  background: #EDF6EE;
+  color: #178E79;
+}
+
+/* El tema base de PrimeReact se carga en @layer y deja el panel en display:none;
+   esta regla sin capa lo vuelve a mostrar al activar "Más". */
+.p-menubar .p-menuitem-active > .p-submenu-list {
+  display: block;
+}
+
 /* ===== Botones PrimeReact (estilo pill verde - referencia GYPSE) ===== */
 .p-button {
   background: #1B9C85 !important;
@@ -215,42 +297,6 @@ a:hover {
 .p-button .p-button-icon,
 .p-button .p-button-label {
   color: #ffffff !important;
-}
-
-@font-face {
-  font-family: 'Poppins';
-  src: url('../assets/fonts/Poppins-Full-Version/Web Fonts/Poppins/Poppins-Light.woff') format('woff2'),
-  url('../assets/fonts/Poppins-Full-Version/Web Fonts/Poppins/Poppins-Light.woff2') format('woff2');
-  font-weight: 300;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Poppins';
-  src: url('../assets/fonts/Poppins-Full-Version/Web Fonts/Poppins/Poppins-Regular.woff2') format('woff2'),
-  url('../assets/fonts/Poppins-Full-Version/Web Fonts/Poppins/Poppins-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Poppins';
-  src: url('../assets/fonts/Poppins-Full-Version/Web Fonts/Poppins/Poppins-Medium.woff2') format('woff2'),
-  url('../assets/fonts/Poppins-Full-Version/Web Fonts/Poppins/Poppins-Medium.woff2') format('woff2');
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Poppins';
-  src: url('../assets/fonts/Poppins-Full-Version/Web Fonts/Poppins/Poppins-SemiBold.woff2') format('woff2'),
-  url('../assets/fonts/Poppins-Full-Version/Web Fonts/Poppins/Poppins-SemiBold.woff2') format('woff2');
-  font-weight: 600;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Poppins';
-  src: url('../assets/fonts/Poppins-Full-Version/Web Fonts/Poppins/Poppins-Bold.woff2') format('woff2'),
-  url('../assets/fonts/Poppins-Full-Version/Web Fonts/Poppins/Poppins-Bold.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
 }
 
 body{

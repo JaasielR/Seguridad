@@ -6,6 +6,13 @@ const QuiénesSomos: React.FC = () => {
             <header className="page-header">
                 <h1 className="plate-heading text-[2.8em]">QUIÉNES SOMOS</h1>
                 <p className="page-subtitle mt-4">Central de Abastos Ecatepec · Estado de México</p>
+                <p className="mx-auto mt-6 max-w-[900px] text-[1.05em] leading-relaxed text-[#f4f1e8]/90">
+                    <strong className="text-[#f3e3b3]">Grupo SICAE</strong> es una empresa mexicana especializada en
+                    seguridad privada. Con presencia en la Central de Abastos de Ecatepec, integramos personal
+                    altamente capacitado, tecnología de vigilancia y protocolos operativos certificados para proteger
+                    a las personas, las instalaciones y las mercancías de nuestros clientes. Ofrecemos soluciones a la
+                    medida, respuesta oportuna y acompañamiento permanente los 365 días del año.
+                </p>
             </header>
 
             <section className="ivory-section mx-auto flex max-w-[1200px] flex-col items-center justify-between gap-10 text-left md:flex-row">
@@ -13,9 +20,9 @@ const QuiénesSomos: React.FC = () => {
                     <h2 className="ivory-title">Misión</h2>
                     <div className="gold-rule mx-0 w-32"></div>
                     <p className="ivory-text">
-                        Debido a las actuales condiciones de inseguridad, se requiere contar con personal altamente calificado,
-                        elementos confiables y un excelente desempeño operativo. Nace la <strong className="text-navy-800">Seguridad Interna de la Central de Abastos Ecatepec</strong>
-                        para proveer esa seguridad a sus clientes, garantizando que sus negocios estén en buenas manos.
+                        Garantizar la seguridad y protección de nuestros clientes mediante soluciones integrales de
+                        seguridad privada, apoyadas en personal confiable, capacitación continua y excelencia
+                        operativa, contribuyendo al desarrollo seguro de sus actividades comerciales.
                     </p>
                 </div>
                 <div className="flex flex-shrink-0 items-center justify-center md:basis-[320px]">

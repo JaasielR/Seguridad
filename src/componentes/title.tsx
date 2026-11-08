@@ -11,11 +11,11 @@ export const Title: React.FC = () => {
                 <i className="pi pi-shield text-lg" aria-hidden="true" />
             </span>
             <span className="flex flex-col leading-none">
-                <span className="font-heading text-[0.95rem] font-extrabold uppercase tracking-[0.5px] text-brand-700">
-                    Seguridad Interna
+                <span className="font-heading text-[0.6rem] font-semibold uppercase tracking-[2px] text-ink-500">
+                    Grupo
                 </span>
-                <span className="font-heading text-[0.62rem] font-semibold uppercase tracking-[2px] text-ink-500">
-                    Central de Abastos Ecatepec
+                <span className="mt-0.5 font-heading text-[1.35rem] font-extrabold uppercase leading-none tracking-[0.5px] text-brand-700">
+                    SICAE
                 </span>
             </span>
         </span>
