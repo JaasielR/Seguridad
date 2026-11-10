@@ -1,6 +1,6 @@
 import { StrictMode, useState, useEffect, useRef } from 'react'
 import { createRoot } from 'react-dom/client'
-import { BrowserRouter, useLocation } from 'react-router-dom'
+import { HashRouter, useLocation } from 'react-router-dom'
 import { Provider } from "react-redux"
 import { store } from "./app/store"
 import App from './App'
@@ -64,9 +64,9 @@ function AppWithLoading() {
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
         <Provider store={store}>
-            <BrowserRouter basename="/Seguridad">
+            <HashRouter>
                 <AppWithLoading />
-            </BrowserRouter>
+            </HashRouter>
         </Provider>
     </StrictMode>,
 )
