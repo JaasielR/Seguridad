@@ -1,15 +1,15 @@
 /**
  * Datos corporativos reales extraídos del Cuadernillo Operativo 2025-2026
- * de "Seguridad Interna de la Central de Abastos Ecatepec".
+ * de Grupo SICAE.
  *
  * Centralizados aquí para mantener una única fuente de verdad y que los
  * componentes de la landing permanezcan limpios y sin texto duplicado.
  */
 
 export const EMPRESA = {
-    nombre: "Seguridad Interna de la Central de Abastos Ecatepec",
-    nombreCorto: "Seguridad Interna CDA Ecatepec",
-    ubicacion: "Central de Abastos · Ecatepec, Estado de México",
+    nombre: "Grupo SICAE",
+    nombreCorto: "Grupo SICAE",
+    ubicacion: "Cobertura en distintas regiones",
     director: "Lic. Eusebio Ortega",
     cargo: "Director Operativo",
     telefono: "5529188467",
@@ -73,7 +73,7 @@ export const SERVICIOS: ServicioInfo[] = [
         iconoImagen: "ref/1/custodia.png",
         titulo: "Custodia de Mercancía",
         resumen:
-            "Custodia de mercancía dentro y fuera de la Central, traslados seguros con unidades equipadas con torreta, faro buscador nocturno y monitoreo 24/7.",
+            "Custodia de mercancía dentro y fuera de sus instalaciones, traslados seguros con unidades equipadas con torreta, faro buscador nocturno y monitoreo 24/7.",
         imagen: "ref/1/custodia.png",
     },
     {
@@ -82,7 +82,7 @@ export const SERVICIOS: ServicioInfo[] = [
         iconoImagen: "ref/1/personas.png",
         titulo: "Protección a Personas",
         resumen:
-            "Escolta y protección ejecutiva a locatarios y directivos, acompañamiento en traslado de valores y nómina, con protocolos de evacuación y rutas seguras.",
+            "Escolta y protección ejecutiva a directivos, empresarios y personal clave, acompañamiento en traslado de valores y nómina, con protocolos de evacuación y rutas seguras.",
         imagen: "ref/1/personas.png",
     },
     {
@@ -182,7 +182,7 @@ export interface TestimonioInfo {
 export const TESTIMONIOS: TestimonioInfo[] = [
     {
         nombre: "Roberto Méndez",
-        cargo: "Locatario · Nave de abarrotes",
+        cargo: "Empresario · Sector abarrotes",
         texto:
             "Desde que contratamos el servicio, los recorridos nocturnos y el control de accesos nos dan total tranquilidad. La respuesta ante cualquier incidente es inmediata.",
     },
@@ -218,7 +218,7 @@ export interface CumplimientoInfo {
  * reales de la empresa cuando los tengas disponibles.
  */
 export const CUMPLIMIENTO: CumplimientoInfo[] = [
-    { entidad: "Gobierno del Estado de México", registro: "Permiso SSP en trámite" },
+    { entidad: "Gobierno estatal", registro: "Permiso SSP en trámite" },
     { entidad: "Dirección General de Seguridad Privada", registro: "Registro operativo vigente" },
     { entidad: "Protección Civil Municipal", registro: "Protocolos de emergencia validados" },
     { entidad: "Capacitación y adiestramiento", registro: "Personal certificado 2025-2026" },
@@ -254,7 +254,7 @@ export const RAZONES: RazonInfo[] = [
     {
         titulo: "Soluciones personalizadas",
         descripcion:
-            "Esquemas adaptados a los riesgos, el sector y las necesidades de cada locatario u operación.",
+            "Esquemas adaptados a los riesgos, el sector y las necesidades de cada cliente u operación.",
     },
     {
         titulo: "Atención cercana",

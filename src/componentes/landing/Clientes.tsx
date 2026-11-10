@@ -117,7 +117,7 @@ const Clientes: React.FC = () => {
                         Organizaciones que protegemos.
                     </h2>
                     <p className="text-[1.05rem] leading-[1.8] text-ink-500">
-                        Agradecemos la confianza de los locatarios y organizaciones que nos permiten
+                        Agradecemos la confianza de las empresas, comercios y organizaciones que nos permiten
                         acompañar sus operaciones día con día.
                     </p>
                 </div>

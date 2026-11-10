@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { whatsappLink } from "../../data/empresa";
+import { Link } from "react-router-dom";
 
 /**
  * Página de detalle — Guardia Intramuros.
@@ -158,12 +158,7 @@ const GuardiaIntramurosDetalle: React.FC = () => {
                             ))}
                         </ul>
 
-                        <a
-                            href={whatsappLink(
-                                "Hola, deseo información sobre el servicio de Guardia Intramuros."
-                            )}
-                            target="_blank"
-                            rel="noopener noreferrer"
+                        <Link to="/contacto"
                             className="mt-[clamp(12px,1.1vw,21px)] flex w-full items-center justify-center gap-[clamp(8px,0.8vw,15px)] rounded-full bg-[#009194] px-[clamp(18px,2vw,38px)] py-[clamp(9px,1.05vw,20px)] text-[clamp(1rem,1.55vw,1.85rem)] font-bold leading-[1.1] text-white !text-white shadow-[0_10px_24px_rgba(0,120,124,0.30)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#00a6aa] hover:!text-white hover:shadow-[0_14px_30px_rgba(0,120,124,0.40)]"
                         >
                             Solicitar Servicio
@@ -179,7 +174,7 @@ const GuardiaIntramurosDetalle: React.FC = () => {
                             >
                                 <path d="M4 12h16M13 5l7 7-7 7" />
                             </svg>
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>

@@ -18,7 +18,7 @@ const HeroSection: React.FC = () => {
         >
             {/* Imagen de fondo con velo verde oscuro */}
             <div
-                className={"absolute inset-0 bg-[url('/fondod.jpg')] bg-cover bg-center bg-no-repeat brightness-[0.3]"}
+                className={"absolute inset-0 bg-[url('/fondod.jpg?v=2')] bg-cover bg-center bg-no-repeat brightness-[0.3]"}
                 aria-hidden="true"
             />
             <div
@@ -45,7 +45,7 @@ const HeroSection: React.FC = () => {
                     <p className="mb-8 max-w-[600px] text-[1.15rem] leading-relaxed text-brand-50/90">
                         Soluciones de seguridad privada diseñadas para proteger personas,
                         instalaciones y operaciones con profesionalismo, supervisión y atención
-                        cercana en la Central de Abastos de Ecatepec.
+                        cercana, con un gran alcance en distintas regiones.
                     </p>
 
                     {/* Oferta de diagnóstico sin costo */}

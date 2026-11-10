@@ -23,8 +23,8 @@ const BolsaTrabajo: React.FC = () => {
                         </h2>
                         <p className="mb-8 max-w-[520px] text-[1.02rem] leading-[1.8] text-brand-50/85">
                             Buscamos personas responsables, profesionales y con vocación de servicio.
-                            Súmate a nuestro equipo y contribuye a crear entornos más seguros en la
-                            Central de Abastos.
+                            Súmate a nuestro equipo y contribuye a crear entornos más seguros en las
+                            distintas regiones donde tenemos presencia.
                         </p>
                         <a
                             href={postular}

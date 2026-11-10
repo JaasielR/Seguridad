@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { whatsappLink } from "../../data/empresa";
+import { Link } from "react-router-dom";
 
 /**
  * Página de detalle — Recorridos Nocturnos Perimetrales.
@@ -230,12 +230,7 @@ const RecorridosNocturnosDetalle: React.FC = () => {
 
                         {/* Llamada a la acción */}
                         <div className="mt-[clamp(24px,2.71vw,52px)] flex justify-center">
-                            <a
-                                href={whatsappLink(
-                                    "Hola, deseo información sobre el servicio de Recorridos Nocturnos Perimetrales."
-                                )}
-                                target="_blank"
-                                rel="noopener noreferrer"
+                            <Link to="/contacto"
                                 className="inline-flex items-center gap-[clamp(8px,0.8vw,15px)] rounded-[clamp(10px,0.73vw,14px)] bg-[#25c8ca] px-[clamp(26px,2.95vw,56px)] py-[clamp(10px,0.78vw,15px)] text-[clamp(0.98rem,1.46vw,1.75rem)] font-bold leading-[1.1] text-white !text-white shadow-[0_14px_30px_rgba(37,200,202,0.28)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1fb4b6] hover:!text-white hover:shadow-[0_18px_36px_rgba(37,200,202,0.38)]"
                             >
                                 Solicitar Servicio
@@ -251,7 +246,7 @@ const RecorridosNocturnosDetalle: React.FC = () => {
                                 >
                                     <path d="M4 12h16M13 5l7 7-7 7" />
                                 </svg>
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>

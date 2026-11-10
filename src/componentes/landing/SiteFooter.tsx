@@ -40,13 +40,6 @@ const SiteFooter: React.FC = () => {
                         Seguridad privada profesional con cobertura 24/7, tecnología avanzada y
                         personal certificado para proteger lo que más importa.
                     </p>
-                    <Link
-                        to="/contacto"
-                        className="mt-6 inline-flex items-center gap-2 rounded-full bg-brand-400 px-6 py-3 text-[0.9rem] font-semibold text-white shadow-lg shadow-brand-900/40 transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-600 hover:shadow-xl"
-                    >
-                        <i className="pi pi-send" aria-hidden="true" />
-                        Solicitar cotización
-                    </Link>
                 </div>
 
                 {/* Contacto */}
@@ -57,7 +50,7 @@ const SiteFooter: React.FC = () => {
                     <ul className="flex flex-col gap-3 text-[0.9rem] text-brand-50/70">
                         <li className="flex items-start gap-3">
                             <i className="pi pi-map-marker mt-0.5 text-brand-400" aria-hidden="true" />
-                            <span>Central de Abastos, Ecatepec de Morelos, Estado de México</span>
+                            <span>Gran alcance y presencia en distintas regiones</span>
                         </li>
                         <li className="flex items-center gap-3">
                             <i className="pi pi-phone text-brand-400" aria-hidden="true" />
@@ -99,6 +92,14 @@ const SiteFooter: React.FC = () => {
                     >
                         Aviso de privacidad
                     </button>
+
+                    <Link
+                        to="/contacto"
+                        className="mt-5 flex w-fit items-center gap-2 rounded-full bg-brand-400 px-6 py-3 text-[0.9rem] font-semibold text-white shadow-lg shadow-brand-900/40 transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-600 hover:shadow-xl"
+                    >
+                        <i className="pi pi-send" aria-hidden="true" />
+                        Solicitar cotización
+                    </Link>
                 </div>
             </div>
 
@@ -134,9 +135,8 @@ const SiteFooter: React.FC = () => {
                         </div>
                         <div className="space-y-4 text-[0.92rem] leading-[1.8] text-ink-500">
                             <p>
-                                GRUPO SICAE, con domicilio en la Central de Abastos de Ecatepec,
-                                Estado de México, es responsable del tratamiento y protección de los
-                                datos personales que usted proporcione a través de este sitio.
+                                GRUPO SICAE es responsable del tratamiento y protección de los datos
+                                personales que usted proporcione a través de este sitio.
                             </p>
                             <p>
                                 Los datos recabados (nombre, empresa, teléfono, correo electrónico y

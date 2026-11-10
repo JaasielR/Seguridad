@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { whatsappLink } from "../../data/empresa";
+import { Link } from "react-router-dom";
 
 /**
  * Página de detalle — Video Vigilancia CCTV.
@@ -110,7 +110,7 @@ const VideoVigilanciaDetalle: React.FC = () => {
                             Sistemas CCTV analógicos e IP con monitoreo 24/7 desde nuestro centro de
                             control certificado, cámaras de alta resolución con visión nocturna e
                             infrarroja, para una vigilancia continua y confiable en todas las áreas de
-                            la Central.
+                            sus instalaciones.
                         </p>
 
                         {/* Garantías */}
@@ -185,12 +185,7 @@ const VideoVigilanciaDetalle: React.FC = () => {
                         aria-hidden="true"
                     />
 
-                    <a
-                        href={whatsappLink(
-                            "Hola, deseo información sobre el servicio de Video Vigilancia CCTV."
-                        )}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                    <Link to="/contacto"
                         className="inline-flex shrink-0 items-center gap-[clamp(8px,0.8vw,15px)] rounded-full bg-[#062b45] px-[clamp(24px,2.7vw,52px)] py-[clamp(10px,1.15vw,22px)] text-[clamp(0.98rem,1.23vw,1.48rem)] font-bold leading-[1.1] text-white !text-white ring-2 ring-[#149e99] shadow-[0_12px_30px_rgba(6,43,69,0.35),0_0_0_6px_rgba(20,158,153,0.10)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#083a5b] hover:!text-white hover:shadow-[0_16px_36px_rgba(6,43,69,0.45),0_0_0_7px_rgba(20,158,153,0.16)]"
                     >
                         Solicitar Servicio
@@ -206,7 +201,7 @@ const VideoVigilanciaDetalle: React.FC = () => {
                         >
                             <path d="M4 12h16M13 5l7 7-7 7" />
                         </svg>
-                    </a>
+                    </Link>
 
                     <div
                         className="h-[2px] w-[clamp(30px,14vw,270px)] bg-[linear-gradient(270deg,rgba(20,158,153,0),#149e99)]"

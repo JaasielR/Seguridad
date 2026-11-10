@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { whatsappLink } from "../../data/empresa";
+import { Link } from "react-router-dom";
 
 /**
  * Página de detalle — Protección a Personas.
@@ -99,7 +99,7 @@ const ProteccionPersonasDetalle: React.FC = () => {
                     </h1>
 
                     <p className="mt-[clamp(2px,0.42vw,8px)] text-[clamp(0.95rem,1.52vw,1.82rem)] font-bold leading-[1.25] text-[#1f9e94]">
-                        Escolta y protección ejecutiva a locatarios y directivos
+                        Escolta y protección ejecutiva a directivos, empresarios y personal clave
                     </p>
                 </header>
 
@@ -121,7 +121,7 @@ const ProteccionPersonasDetalle: React.FC = () => {
                         >
                             <img
                                 src={asset("f.jpg")}
-                                alt="Guardia de seguridad acompañando a un directivo durante su traslado en la Central de Abastos"
+                                alt="Guardia de seguridad acompañando a un directivo durante su traslado"
                                 className="h-full w-full object-cover object-[50%_26%]"
                             />
                         </div>
@@ -166,12 +166,7 @@ const ProteccionPersonasDetalle: React.FC = () => {
                         aria-hidden="true"
                     />
 
-                    <a
-                        href={whatsappLink(
-                            "Hola, deseo información sobre el servicio de Protección a Personas."
-                        )}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                    <Link to="/contacto"
                         className="inline-flex shrink-0 items-center gap-[clamp(8px,0.8vw,15px)] rounded-full bg-[#0d2b45] px-[clamp(24px,2.7vw,52px)] py-[clamp(10px,1.05vw,20px)] text-[clamp(0.98rem,1.35vw,1.62rem)] font-bold leading-[1.1] text-white !text-white ring-2 ring-[#1f9e94] shadow-[0_0_0_6px_rgba(31,158,148,0.12),0_14px_32px_rgba(13,43,69,0.35)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#113b5c] hover:!text-white hover:shadow-[0_0_0_7px_rgba(31,158,148,0.18),0_18px_38px_rgba(13,43,69,0.45)]"
                     >
                         Solicitar Servicio
@@ -187,7 +182,7 @@ const ProteccionPersonasDetalle: React.FC = () => {
                         >
                             <path d="M4 12h16M13 5l7 7-7 7" />
                         </svg>
-                    </a>
+                    </Link>
 
                     <div
                         className="h-[2px] w-[clamp(34px,12vw,230px)] bg-[linear-gradient(270deg,rgba(31,158,148,0),#1f9e94)]"

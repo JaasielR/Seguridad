@@ -62,8 +62,9 @@ const QuienesSomos: React.FC = () => {
                     </h2>
                     <p className="text-[1.05rem] leading-[1.9] text-ink-500">
                         <strong className="text-brand-700">Grupo SICAE</strong> es una empresa mexicana especializada en
-                        seguridad privada. Con presencia en la Central de Abastos de Ecatepec, integramos personal
-                        altamente capacitado, tecnología de vigilancia y protocolos operativos certificados para
+                        seguridad privada. Con presencia en distintas regiones y un gran alcance operativo,
+                        integramos personal altamente capacitado, tecnología de vigilancia y protocolos
+                        operativos certificados para
                         proteger a las personas, las instalaciones y las mercancías de nuestros clientes. Ofrecemos
                         soluciones a la medida, respuesta oportuna y acompañamiento permanente los 365 días del año.
                     </p>
@@ -97,7 +98,7 @@ const QuienesSomos: React.FC = () => {
 
                             {/* Número de marca como marca de agua */}
                             <span
-                                className="pointer-events-none absolute -right-1 -top-5 select-none font-heading text-[6.5rem] font-extrabold leading-none text-brand-50 transition-colors duration-300 group-hover:text-brand-100"
+                                className="pointer-events-none absolute -right-1 top-4 select-none font-heading text-[6.5rem] font-extrabold leading-none text-brand-50 transition-colors duration-300 group-hover:text-brand-100"
                                 aria-hidden="true"
                             >
                                 {String(indice + 1).padStart(2, "0")}

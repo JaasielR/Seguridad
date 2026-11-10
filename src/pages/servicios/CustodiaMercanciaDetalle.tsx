@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { whatsappLink } from "../../data/empresa";
+import { Link } from "react-router-dom";
 
 /**
  * Página de detalle — Custodia de Mercancía.
@@ -20,7 +20,7 @@ const asset = (ruta: string): string => `${import.meta.env.BASE_URL}${ruta}`;
 const TARJETAS = [
     {
         numero: "1",
-        titulo: "Custodia dentro y fuera de la Central",
+        titulo: "Custodia dentro y fuera de sus instalaciones",
         texto: "Protección desde punto de origen hasta destino, control total y revisión de carga",
     },
     {
@@ -76,7 +76,7 @@ const CustodiaMercanciaDetalle: React.FC = () => {
                     </h1>
 
                     <p className="mt-[clamp(4px,0.55vw,10px)] text-[clamp(0.92rem,1.72vw,2.06rem)] font-bold leading-[1.15] text-[#0b8f8d]">
-                        Traslados seguros dentro y fuera de la Central
+                        Traslados seguros dentro y fuera de sus instalaciones
                     </p>
                 </header>
 
@@ -84,7 +84,7 @@ const CustodiaMercanciaDetalle: React.FC = () => {
                 <div className="relative mx-auto mt-[clamp(14px,1.15vw,22px)] aspect-[16/9] w-full overflow-hidden rounded-[clamp(12px,1.25vw,24px)] shadow-[0_18px_44px_rgba(10,60,70,0.18)] sm:aspect-[2.6/1] lg:aspect-[3.87/1] lg:w-[61%]">
                     <img
                         src={asset("e.jpg")}
-                        alt="Guardias de Seguridad Interna recorriendo los pasillos de la Central de Abastos"
+                        alt="Guardias de seguridad recorriendo pasillos e instalaciones"
                         className="h-full w-full object-cover object-[50%_42%]"
                     />
 
@@ -148,12 +148,7 @@ const CustodiaMercanciaDetalle: React.FC = () => {
                         ))}
                     </div>
 
-                    <a
-                        href={whatsappLink(
-                            "Hola, deseo información sobre el servicio de Custodia de Mercancía."
-                        )}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                    <Link to="/contacto"
                         className="inline-flex w-full max-w-[420px] items-center justify-center gap-[clamp(8px,0.8vw,15px)] rounded-full bg-[#0b2338] px-[clamp(24px,2.3vw,44px)] py-[clamp(12px,0.85vw,16px)] text-[clamp(1rem,1.4vw,1.7rem)] font-bold leading-[1.1] text-white !text-white shadow-[0_12px_26px_rgba(5,25,45,0.28)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#12334c] hover:!text-white hover:shadow-[0_16px_32px_rgba(5,25,45,0.36)] lg:w-auto lg:max-w-none"
                     >
                         Solicitar Servicio
@@ -169,7 +164,7 @@ const CustodiaMercanciaDetalle: React.FC = () => {
                         >
                             <path d="M4 12h16M13 5l7 7-7 7" />
                         </svg>
-                    </a>
+                    </Link>
                 </div>
             </div>
         </section>

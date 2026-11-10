@@ -70,11 +70,6 @@ const Cumplimiento: React.FC = () => {
                         );
                     })}
                 </div>
-
-                <p className="mt-8 text-center text-[0.8rem] italic text-ink-300">
-                    * Los registros mostrados son representativos. Solicite la documentación vigente
-                    para verificación.
-                </p>
             </div>
         </section>
     );

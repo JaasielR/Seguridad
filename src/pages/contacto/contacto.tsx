@@ -27,8 +27,8 @@ const Contacto: React.FC = () => {
                     <div className="flex items-center gap-5 rounded-[10px] border border-gold-400/40 bg-navy-panel p-5 shadow-plate">
                         <span className="flex-shrink-0 text-[2em]">📍</span>
                         <div>
-                            <span className="mb-[5px] block text-[0.9em] tracking-wide text-ivory-100">Ubicación</span>
-                            <strong className="block text-[1.2em] font-bold text-gold-200">Ecatepec, Estado de México</strong>
+                            <span className="mb-[5px] block text-[0.9em] tracking-wide text-ivory-100">Cobertura</span>
+                            <strong className="block text-[1.2em] font-bold text-gold-200">Distintas regiones</strong>
                         </div>
                     </div>
                     <div className="flex items-center gap-5 rounded-[10px] border border-gold-400/40 bg-navy-panel p-5 shadow-plate">
@@ -99,7 +99,7 @@ const Contacto: React.FC = () => {
 
             <footer className="site-footer">
                 <p>Para más información, contacte al <strong>Lic. Eusebio Ortega</strong> al <strong>5529188467</strong></p>
-                <p>Director Operativo · Central de Abastos Ecatepec, Estado de México</p>
+                <p>Director Operativo · Grupo SICAE</p>
             </footer>
         </div>
     );

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { whatsappLink } from "../../data/empresa";
+import { Link } from "react-router-dom";
 
 /**
  * Página de detalle — Motopatrullas DM 250.
@@ -133,7 +133,7 @@ const MotopatrullasDetalle: React.FC = () => {
                         <div className="overflow-hidden rounded-[clamp(18px,1.46vw,28px)] border-[clamp(5px,0.52vw,10px)] border-white bg-white shadow-[0_24px_60px_rgba(10,35,55,0.18),0_4px_14px_rgba(10,35,55,0.08)]">
                             <img
                                 src={asset("c.jpg")}
-                                alt="Motopatrulla de seguridad interna en la Central de Abastos Ecatepec"
+                                alt="Motopatrulla de seguridad durante un recorrido de vigilancia"
                                 className="aspect-[1.38/1] w-full object-cover object-[50%_40%]"
                             />
                         </div>
@@ -181,17 +181,12 @@ const MotopatrullasDetalle: React.FC = () => {
                         aria-hidden="true"
                     />
 
-                    <a
-                        href={whatsappLink(
-                            "Hola, deseo información sobre el servicio de Motopatrullas DM 250."
-                        )}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                    <Link to="/contacto"
                         className="inline-flex items-center gap-[12px] rounded-full bg-[#0f8b87] px-[clamp(24px,2.85vw,56px)] py-[clamp(10px,0.82vw,16px)] text-[clamp(1rem,1.4vw,1.7rem)] font-bold text-white !text-white shadow-[0_12px_26px_rgba(14,139,135,0.28)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#0b7c79] hover:!text-white hover:shadow-[0_16px_32px_rgba(14,139,135,0.36)]"
                     >
                         Solicitar Servicio
                         <i className="pi pi-arrow-right text-[0.8em]" aria-hidden="true" />
-                    </a>
+                    </Link>
 
                     <span
                         className="hidden h-[2px] w-[clamp(70px,9.9vw,190px)] bg-gradient-to-r from-[#0f8b87] to-transparent md:block"

@@ -5,11 +5,12 @@ const QuiénesSomos: React.FC = () => {
         <div className="page-shell">
             <header className="page-header">
                 <h1 className="plate-heading text-[2.8em]">QUIÉNES SOMOS</h1>
-                <p className="page-subtitle mt-4">Central de Abastos Ecatepec · Estado de México</p>
+                <p className="page-subtitle mt-4">Gran alcance · Cobertura en distintas regiones</p>
                 <p className="mx-auto mt-6 max-w-[900px] text-[1.05em] leading-relaxed text-[#f4f1e8]/90">
                     <strong className="text-[#f3e3b3]">Grupo SICAE</strong> es una empresa mexicana especializada en
-                    seguridad privada. Con presencia en la Central de Abastos de Ecatepec, integramos personal
-                    altamente capacitado, tecnología de vigilancia y protocolos operativos certificados para proteger
+                    seguridad privada. Con presencia en distintas regiones y un gran alcance operativo,
+                    integramos personal altamente capacitado, tecnología de vigilancia y protocolos
+                    operativos certificados para proteger
                     a las personas, las instalaciones y las mercancías de nuestros clientes. Ofrecemos soluciones a la
                     medida, respuesta oportuna y acompañamiento permanente los 365 días del año.
                 </p>
@@ -49,7 +50,7 @@ const QuiénesSomos: React.FC = () => {
 
             <footer className="site-footer">
                 <p>Para más información, contacte al <strong>Lic. Eusebio Ortega</strong> al <strong>5529188467</strong></p>
-                <p>Director Operativo · Central de Abastos Ecatepec, Estado de México</p>
+                <p>Director Operativo · Grupo SICAE</p>
             </footer>
         </div>
     );

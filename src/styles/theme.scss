@@ -386,3 +386,31 @@ body{
   }
 }
 
+/* ===== Alineación de textos =====
+   Justifica los párrafos del sitio (escritorio y móvil) y respeta las
+   alineaciones explícitas definidas con utilidades de Tailwind. */
+p {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+
+.text-center,
+.text-center p,
+p.text-center {
+  text-align: center;
+}
+
+.text-left,
+.text-left p,
+p.text-left {
+  text-align: left;
+}
+
+.text-right,
+.text-right p,
+p.text-right {
+  text-align: right;
+}
+
