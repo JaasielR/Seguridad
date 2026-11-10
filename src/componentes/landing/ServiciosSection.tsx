@@ -6,8 +6,8 @@ import { SERVICIOS } from "../../data/empresa";
  * Sección "Soluciones especializadas" — réplica de la referencia visual.
  *
  * Composición:
- *   - Fondo fotográfico a sangre (Servicios.jpg) con un velo claro que se
- *     desvanece hacia abajo para dejar visible la cámara del lado izquierdo.
+ *   - Fondo fotográfico del equipo de seguridad (ref/1/fondo.jpg) atenuado con
+ *     un velo claro para que no compita con el texto ni con las tarjetas.
  *   - Columna izquierda: filete y eyebrow teal, titular grande en azul
  *     marino con la palabra "operación." en verde, y párrafo descriptivo.
  *   - Columna derecha: cuadrícula 3×2 de tarjetas blancas con un pequeño
@@ -31,47 +31,24 @@ const ServiciosSection: React.FC = () => {
             id="servicios"
             className="relative scroll-mt-20 overflow-hidden bg-[#eef6f8] px-[20px] py-16 [font-family:'Poppins','Montserrat',sans-serif] sm:px-[24px] sm:py-20 lg:px-[40px] lg:pb-[64px] lg:pt-[80px]"
         >
-            {/* ── Fondo fotográfico ── */}
+            {/* ── Fondo fotográfico: equipo de seguridad ── */}
             <div
-                className="pointer-events-none absolute inset-0 bg-cover bg-[position:30%_center] bg-no-repeat md:bg-center"
-                style={{ backgroundImage: `url(${asset("ref/1/Servicios.jpg")})` }}
+                className="pointer-events-none absolute inset-0 bg-cover bg-[position:center_40%] bg-no-repeat brightness-[1.04] saturate-[0.7]"
+                style={{ backgroundImage: `url(${asset("ref/1/fondo.jpg")})` }}
                 aria-hidden="true"
             />
 
-            {/* ── Velo claro: intenso arriba, transparente abajo (cámara visible) ── */}
+            {/* ── Velo claro: a la izquierda la fotografía se aprecia mucho más;
+                   hacia la derecha se vuelve casi opaca bajo las tarjetas ── */}
             <div
-                className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.7)_0%,rgba(255,255,255,0.45)_30%,rgba(255,255,255,0.12)_62%,rgba(255,255,255,0)_100%)]"
+                className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(238,246,248,0.32)_0%,rgba(238,246,248,0.52)_32%,rgba(238,246,248,0.82)_62%,rgba(238,246,248,0.96)_100%)]"
                 aria-hidden="true"
             />
+            {/* ── Velo vertical: suaviza el cielo y la franja inferior ── */}
             <div
-                className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_0%_0%,rgba(255,255,255,0.55),transparent_55%)]"
+                className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.18)_0%,rgba(238,246,248,0)_30%,rgba(238,246,248,0.08)_65%,rgba(238,246,248,0.3)_100%)]"
                 aria-hidden="true"
             />
-
-            {/* ── Formas decorativas teal muy suaves (como en la referencia) ── */}
-            <svg
-                className="pointer-events-none absolute inset-0 h-full w-full"
-                viewBox="0 0 1600 900"
-                preserveAspectRatio="xMidYMid slice"
-                aria-hidden="true"
-            >
-                <path
-                    d="M700 -140 C 900 40 1120 20 1300 170 S 1570 330 1760 280"
-                    fill="none"
-                    stroke="#c9e9e4"
-                    strokeWidth="70"
-                    strokeLinecap="round"
-                    opacity="0.5"
-                />
-                <path
-                    d="M1030 -190 C 1230 -20 1300 120 1560 190 S 1780 320 1840 420"
-                    fill="none"
-                    stroke="#d6efeb"
-                    strokeWidth="45"
-                    strokeLinecap="round"
-                    opacity="0.55"
-                />
-            </svg>
 
             {/* ── Contenido ── */}
             <div className="relative mx-auto grid w-full max-w-[1480px] items-start gap-[40px] lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.75fr)] lg:gap-[40px] xl:gap-[44px]">

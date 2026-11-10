@@ -151,19 +151,25 @@ export const BENEFICIOS: BeneficioInfo[] = [
     },
 ];
 
-/** Sectores atendidos (de la página "Guardia Intramuros"). */
-export const SECTORES: string[] = [
-    "Sector farmacéutico",
-    "Fábricas",
-    "Centro comercial",
-    "Zona residencial",
-    "Escuelas",
-    "Hospital",
-    "Hoteles",
-    "Restaurante",
-    "Bodegas",
-    "Automotriz",
-    "Naves industriales",
+/** Sectores atendidos, con la imagen que los representa en el carrusel. */
+export interface SectorInfo {
+    nombre: string;
+    /** Ruta relativa dentro de /public. Si falta, se muestra una tarjeta de marca. */
+    imagen?: string;
+}
+
+export const SECTORES: SectorInfo[] = [
+    { nombre: "Sector farmacéutico", imagen: "ref/9/10.jpg" },
+    { nombre: "Fábricas", imagen: "ref/9/1.jpg" },
+    { nombre: "Centro comercial", imagen: "ref/9/2.jpg" },
+    { nombre: "Zona residencial", imagen: "ref/9/3.jpg" },
+    { nombre: "Escuelas", imagen: "ref/9/9.jpg" },
+    { nombre: "Hospital", imagen: "ref/9/11.jpg" },
+    { nombre: "Hoteles", imagen: "ref/9/4.jpg" },
+    { nombre: "Restaurante", imagen: "ref/9/8.jpg" },
+    { nombre: "Bodegas", imagen: "ref/9/7.jpg" },
+    { nombre: "Automotriz", imagen: "ref/9/6.jpg" },
+    { nombre: "Naves industriales", imagen: "ref/9/5.jpg" },
 ];
 
 /** Testimonios de clientes para el carrusel. */

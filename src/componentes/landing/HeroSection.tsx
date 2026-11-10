@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { LEMA, whatsappLink } from "../../data/empresa";
 
 /**
@@ -6,8 +7,9 @@ import { LEMA, whatsappLink } from "../../data/empresa";
  * oscuro, texto blanco centrado/alineado, lema tripartito y botones pill.
  */
 const HeroSection: React.FC = () => {
-    const irAContacto = () =>
-        document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth" });
+    const navigate = useNavigate();
+
+    const irAContacto = () => navigate("/contacto");
 
     return (
         <section
@@ -77,7 +79,7 @@ const HeroSection: React.FC = () => {
             {/* Indicador de scroll */}
             <button
                 onClick={() =>
-                    document.getElementById("servicios")?.scrollIntoView({ behavior: "smooth" })
+                    document.getElementById("quienes-somos")?.scrollIntoView({ behavior: "smooth" })
                 }
                 aria-label="Desplazarse hacia abajo"
                 className="absolute bottom-8 left-1/2 z-[1] -translate-x-1/2 animate-bounce text-white/70 transition-colors hover:text-white"

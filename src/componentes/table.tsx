@@ -16,7 +16,7 @@ export default function BusquedaMenu() {
     const navigate = useNavigate();
 
     const opciones: Opcion[] = [
-        { label: "Quiénes Somos", ruta: "/quienes-somos" },
+        { label: "Quiénes Somos", ruta: "/quienes_somos" },
         { label: "Servicios", ruta: "/servicios" },
         { label: "Video Vigilancia", ruta: "/video-vigilancia" },
         { label: "Contacto", ruta: "/contacto" }

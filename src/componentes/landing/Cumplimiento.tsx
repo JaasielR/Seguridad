@@ -1,9 +1,25 @@
 import React from "react";
 import { CUMPLIMIENTO } from "../../data/empresa";
 
+/** Resuelve rutas de /public respetando el BASE_URL (GitHub Pages). */
+const asset = (ruta: string) => `${import.meta.env.BASE_URL}${ruta}`;
+
+/**
+ * Identidad visual de cada permiso, en el mismo orden que CUMPLIMIENTO.
+ * Los tres primeros usan el logo de la institución; el último, un icono
+ * acorde a capacitación y adiestramiento.
+ */
+const INSIGNIAS: Array<{ imagen?: string; icono?: string; clase?: string }> = [
+    { imagen: "ref/8/edomex.webp" },
+    // La bandera viene con mucho margen alrededor: se escala para que se aprecie.
+    { imagen: "ref/8/mex.webp", clase: "scale-[2.2]" },
+    { imagen: "ref/8/pcivil.jpg" },
+    { icono: "pi pi-graduation-cap" },
+];
+
 /**
  * Sección "Legalidad y cumplimiento" (estilo referencia GYPSE):
- * fondo blanco, tarjetas claras con icono verde.
+ * fondo blanco, tarjetas claras con el logo o icono de cada permiso.
  */
 const Cumplimiento: React.FC = () => {
     return (
@@ -22,22 +38,37 @@ const Cumplimiento: React.FC = () => {
                 </div>
 
                 <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-                    {CUMPLIMIENTO.map((item) => (
-                        <article
-                            key={item.entidad}
-                            className="flex items-start gap-4 rounded-2xl border border-gray-100 bg-white p-6 shadow-[0_4px_20px_rgba(6,20,12,0.05)] transition-all duration-300 hover:-translate-y-1 hover:border-brand-100 hover:shadow-[0_12px_32px_rgba(27,156,133,0.12)]"
-                        >
-                            <span className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-brand-50 text-xl text-brand-500">
-                                <i className="pi pi-verified" aria-hidden="true" />
-                            </span>
-                            <div>
-                                <h3 className="mb-1 font-heading text-[1rem] font-bold text-ink-900">
-                                    {item.entidad}
-                                </h3>
-                                <p className="text-[0.9rem] text-ink-500">{item.registro}</p>
-                            </div>
-                        </article>
-                    ))}
+                    {CUMPLIMIENTO.map((item, indice) => {
+                        const insignia = INSIGNIAS[indice] ?? {};
+                        return (
+                            <article
+                                key={item.entidad}
+                                className="flex items-start gap-4 rounded-2xl border border-gray-100 bg-white p-6 shadow-[0_4px_20px_rgba(6,20,12,0.05)] transition-all duration-300 hover:-translate-y-1 hover:border-brand-100 hover:shadow-[0_12px_32px_rgba(27,156,133,0.12)]"
+                            >
+                                <span className="flex h-16 w-16 flex-shrink-0 items-center justify-center overflow-hidden rounded-xl border border-gray-100 bg-white p-2 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.6)]">
+                                    {insignia.imagen ? (
+                                        <img
+                                            src={asset(insignia.imagen)}
+                                            alt={`Logo ${item.entidad}`}
+                                            className={`h-full w-full object-contain ${insignia.clase ?? ""}`}
+                                            loading="lazy"
+                                        />
+                                    ) : (
+                                        <i
+                                            className={`${insignia.icono} text-[1.6rem] text-brand-500`}
+                                            aria-hidden="true"
+                                        />
+                                    )}
+                                </span>
+                                <div className="min-w-0">
+                                    <h3 className="mb-1 font-heading text-[1rem] font-bold text-ink-900">
+                                        {item.entidad}
+                                    </h3>
+                                    <p className="text-[0.9rem] text-ink-500">{item.registro}</p>
+                                </div>
+                            </article>
+                        );
+                    })}
                 </div>
 
                 <p className="mt-8 text-center text-[0.8rem] italic text-ink-300">

@@ -246,8 +246,18 @@ a:hover {
   border-radius: 12px;
   box-shadow: 0 12px 30px rgba(6, 20, 12, 0.12);
   padding: .6rem;
-  min-width: 15rem;
+  min-width: 22rem;
   z-index: 1001;
+}
+
+/* El desplegable de "Más" se alinea a la derecha para no salir de la pantalla. */
+.p-menubar-root-list > li:last-child .p-submenu-list {
+  left: auto;
+  right: 0;
+}
+
+.p-menubar .p-submenu-list .p-menuitem-link {
+  white-space: nowrap;
 }
 
 .p-menubar .p-submenu-list .p-menuitem-text {

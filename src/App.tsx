@@ -2,31 +2,25 @@ import Inicio from "./pages/inicio/inicio";
 import Title from "./componentes/title";
 import DesktopMenu from "./componentes/desktopMenu";
 import MobileMenu from "./componentes/menu";
-import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
-import QuiénesSomos from "./pages/quienes-somos/quienes-somos";
+import { Routes, Route, useNavigate, useLocation, Navigate } from "react-router-dom";
 import Servicios from "./pages/servicios/servicios";
 import ServicioDetalle from "./pages/servicios/servicio-detalle";
 import VideoVigilancia from "./pages/video-vigilancia/video-vigilancia";
-import Contacto from "./pages/contacto/contacto";
+import ContactoPage from "./pages/contacto/contacto-page";
 import WhatsAppButton from "./componentes/WhatsAppButton";
+import { irASeccion } from "./componentes/irASeccion";
 
 /** Botón destacado del header: lleva al formulario de solicitud/cotización. */
 function CotizacionButton() {
     const navigate = useNavigate();
     const location = useLocation();
 
-    const solicitar = () => {
-        if (location.pathname === "/") {
-            document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth" });
-        } else {
-            navigate("/", { state: { scrollTo: "contacto" } });
-        }
-    };
+    const solicitar = () => irASeccion(navigate, location.pathname, "/contacto");
 
     return (
         <button
             onClick={solicitar}
-            className="hidden items-center gap-2 rounded-full border-2 border-brand-700 bg-transparent px-6 py-2.5 text-[0.85rem] font-semibold text-brand-700 transition-all duration-300 hover:border-brand-600 hover:bg-brand-600 hover:text-white min-[1250px]:inline-flex"
+            className="hidden items-center gap-2 rounded-full border-2 border-brand-700 bg-brand-700 px-6 py-2.5 text-[0.85rem] font-semibold text-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-600 hover:bg-brand-600 hover:text-white hover:shadow-md min-[1250px]:inline-flex"
         >
             <i className="pi pi-shield" aria-hidden="true" />
             Solicitar Cotización
@@ -52,12 +46,34 @@ function App() {
                 </div>
             </header>
             <Routes>
-                <Route path="/" element={<Inicio />} />
-                <Route path="/quienes-somos" element={<QuiénesSomos />} />
+                {/* Página de inicio y alias de sus secciones */}
+                <Route path="/" element={<Navigate to="/home" replace />} />
+                <Route path="/home" element={<Inicio />} />
+                <Route path="/quienes_somos" element={<Inicio seccion="quienes-somos" />} />
+                <Route path="/organizaciones" element={<Inicio seccion="clientes" />} />
+                <Route path="/testimonios" element={<Inicio seccion="testimonios" />} />
+                <Route path="/permisos" element={<Inicio seccion="cumplimiento" />} />
+
+                {/* Página de servicios y alias de su sección */}
                 <Route path="/servicios" element={<Servicios />} />
+                <Route path="/porque_elegirnos" element={<Servicios seccion="beneficios" />} />
                 <Route path="/servicios/:id" element={<ServicioDetalle />} />
+
+                {/* Contacto y página heredada de video vigilancia */}
+                <Route path="/contacto" element={<ContactoPage />} />
                 <Route path="/video-vigilancia" element={<VideoVigilancia />} />
-                <Route path="/contacto" element={<Contacto />} />
+
+                {/* Alias anteriores para no romper enlaces existentes */}
+                <Route path="/inicio" element={<Navigate to="/home" replace />} />
+                <Route path="/quienes-somos" element={<Navigate to="/quienes_somos" replace />} />
+                <Route
+                    path="/organizaciones_que_protegemos"
+                    element={<Navigate to="/organizaciones" replace />}
+                />
+                <Route path="/permisos_y_registros" element={<Navigate to="/permisos" replace />} />
+
+                {/* Cualquier URL desconocida vuelve al inicio (siempre con footer). */}
+                <Route path="*" element={<Navigate to="/home" replace />} />
             </Routes>
 
             {/* Botón flotante de WhatsApp, visible en todas las pantallas */}

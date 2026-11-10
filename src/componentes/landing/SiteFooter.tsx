@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { EMPRESA, whatsappLink } from "../../data/empresa";
 
 /**
@@ -20,18 +21,32 @@ const SiteFooter: React.FC = () => {
             <div className="mx-auto grid max-w-[1240px] gap-10 px-5 pb-10 sm:grid-cols-2 lg:grid-cols-4">
                 {/* Marca */}
                 <div className="lg:col-span-2">
-                    <div className="mb-4 flex items-center gap-2.5">
-                        <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-brand-400 text-white">
-                            <i className="pi pi-shield text-lg" aria-hidden="true" />
-                        </span>
-                        <h3 className="font-heading text-[1.05rem] font-extrabold uppercase tracking-[0.5px] text-white">
-                            Seguridad Interna CDA
-                        </h3>
+                    <div className="mb-4 flex items-center gap-3">
+                        <img
+                            src={`${import.meta.env.BASE_URL}logo.png`}
+                            alt="Grupo SICAE"
+                            className="h-16 w-16 shrink-0 object-contain"
+                        />
+                        <div className="flex flex-col leading-none">
+                            <h3 className="font-heading text-[1.3rem] font-extrabold uppercase leading-tight tracking-[0.5px] text-white">
+                                GRUPO SICAE
+                            </h3>
+                            <span className="mt-1 text-[0.68rem] font-semibold uppercase tracking-[3px] text-brand-400">
+                                Seguridad privada
+                            </span>
+                        </div>
                     </div>
                     <p className="max-w-[420px] text-[0.92rem] leading-[1.8] text-brand-50/70">
                         Seguridad privada profesional con cobertura 24/7, tecnología avanzada y
                         personal certificado para proteger lo que más importa.
                     </p>
+                    <Link
+                        to="/contacto"
+                        className="mt-6 inline-flex items-center gap-2 rounded-full bg-brand-400 px-6 py-3 text-[0.9rem] font-semibold text-white shadow-lg shadow-brand-900/40 transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-600 hover:shadow-xl"
+                    >
+                        <i className="pi pi-send" aria-hidden="true" />
+                        Solicitar cotización
+                    </Link>
                 </div>
 
                 {/* Contacto */}
@@ -89,7 +104,7 @@ const SiteFooter: React.FC = () => {
 
             {/* Barra de derechos reservados */}
             <div className="border-t border-white/10 py-5 text-center text-[0.82rem] text-brand-50/50">
-                © {anio} {EMPRESA.nombre}. Todos los derechos reservados.
+                © {anio} GRUPO SICAE. Todos los derechos reservados.
             </div>
 
             {/* Modal de aviso de privacidad */}
@@ -119,7 +134,7 @@ const SiteFooter: React.FC = () => {
                         </div>
                         <div className="space-y-4 text-[0.92rem] leading-[1.8] text-ink-500">
                             <p>
-                                {EMPRESA.nombre}, con domicilio en la Central de Abastos de Ecatepec,
+                                GRUPO SICAE, con domicilio en la Central de Abastos de Ecatepec,
                                 Estado de México, es responsable del tratamiento y protección de los
                                 datos personales que usted proporcione a través de este sitio.
                             </p>

@@ -1,23 +1,64 @@
 import React from "react";
-import { SECTORES, VALORES } from "../../data/empresa";
+import { VALORES } from "../../data/empresa";
+
+/** Fondo: edificio con geometría verde de la identidad visual. */
+const FONDO = `${import.meta.env.BASE_URL}ref/4/fondo_con_edificio_1920x1080.png`;
 
 /**
- * Sección "Quiénes somos" (estilo referencia GYPSE): fondo verde muy claro,
- * misión/visión/valores en tarjetas blancas, chips de valores y sectores.
+ * Sección "Quiénes somos": presentación editorial sobre el fondo del edificio
+ * con geometría verde, chips de valores y tarjetas de Misión y Visión.
  */
 const QuienesSomos: React.FC = () => {
+    const pilares = [
+        {
+            icono: "pi pi-flag",
+            etiqueta: "Nuestra razón de ser",
+            titulo: "Misión",
+            texto:
+                "Garantizar la seguridad y protección de nuestros clientes mediante soluciones integrales de seguridad privada, apoyadas en personal confiable, capacitación continua y excelencia operativa, contribuyendo al desarrollo seguro de sus actividades comerciales.",
+        },
+        {
+            icono: "pi pi-compass",
+            etiqueta: "Hacia dónde vamos",
+            titulo: "Visión",
+            texto:
+                "Ser la empresa líder en seguridad privada en México, reconocida por nuestra confianza, innovación y excelencia operativa en la prestación de servicios.",
+        },
+    ];
+
     return (
         <section
             id="quienes-somos"
-            className="relative scroll-mt-20 bg-brand-50 px-5 py-24"
+            className="relative scroll-mt-20 overflow-hidden bg-brand-50 px-5 py-24"
         >
-            <div className="mx-auto max-w-[1240px]">
+            {/* Fondo fotográfico: edificio + geometría de marca */}
+            <div
+                className="pointer-events-none absolute inset-0 bg-cover bg-[position:center_bottom] bg-no-repeat saturate-[1.12]"
+                style={{ backgroundImage: `url(${FONDO})` }}
+                aria-hidden="true"
+            />
+
+            {/* Velo para conservar la legibilidad y la armonía con la paleta */}
+            <div
+                className="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/85 via-brand-50/60 to-brand-50/20"
+                aria-hidden="true"
+            />
+            <div
+                className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-brand-50/85 to-transparent"
+                aria-hidden="true"
+            />
+
+            <div className="relative mx-auto max-w-[1240px]">
                 <div className="mb-14 max-w-[760px]">
-                    <span className="mb-4 block text-[0.82rem] font-bold uppercase tracking-[3px] text-brand-400">
-                        Quiénes somos
-                    </span>
+                    <div className="mb-4 flex items-center gap-3">
+                        <span className="h-[2px] w-9 rounded-full bg-brand-400" aria-hidden="true" />
+                        <span className="text-[0.82rem] font-bold uppercase tracking-[3px] text-brand-500">
+                            Quiénes somos
+                        </span>
+                    </div>
                     <h2 className="mb-5 font-heading text-[2rem] font-bold leading-tight text-ink-900 sm:text-[2.6rem]">
-                        Seguridad integral para proteger lo que más importa.
+                        Seguridad integral para{" "}
+                        <span className="text-brand-700">proteger lo que más importa.</span>
                     </h2>
                     <p className="text-[1.05rem] leading-[1.9] text-ink-500">
                         <strong className="text-brand-700">Grupo SICAE</strong> es una empresa mexicana especializada en
@@ -32,7 +73,7 @@ const QuienesSomos: React.FC = () => {
                         {VALORES.map((valor) => (
                             <span
                                 key={valor}
-                                className="inline-flex items-center gap-2 rounded-full border border-brand-100 bg-white px-4 py-2 text-[0.85rem] font-medium text-ink-700 transition-all duration-300 hover:border-brand-400 hover:text-brand-700"
+                                className="inline-flex items-center gap-2 rounded-full border border-white/80 bg-white/80 px-4 py-2 text-[0.85rem] font-medium text-ink-700 shadow-sm backdrop-blur-sm transition-all duration-300 hover:border-brand-400 hover:bg-white hover:text-brand-700"
                             >
                                 <i className="pi pi-check text-brand-500" aria-hidden="true" />
                                 {valor}
@@ -41,64 +82,44 @@ const QuienesSomos: React.FC = () => {
                     </div>
                 </div>
 
-                {/* Misión / Visión / Valores */}
-                <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-                    {[
-                        {
-                            icono: "pi pi-flag",
-                            titulo: "Misión",
-                            texto:
-                                "Garantizar la seguridad y protección de nuestros clientes mediante soluciones integrales de seguridad privada, apoyadas en personal confiable, capacitación continua y excelencia operativa, contribuyendo al desarrollo seguro de sus actividades comerciales.",
-                        },
-                        {
-                            icono: "pi pi-compass",
-                            titulo: "Visión",
-                            texto:
-                                "Ser la empresa líder en seguridad privada en México, reconocida por nuestra confianza, innovación y excelencia operativa en la prestación de servicios.",
-                        },
-                        {
-                            icono: "pi pi-star",
-                            titulo: "Valores",
-                            texto:
-                                "Confianza, profesionalismo, confidencialidad y reacción inmediata. Trato profesional 24/7 y compromiso absoluto con la protección de nuestros clientes.",
-                        },
-                    ].map((item) => (
+                {/* Misión / Visión */}
+                <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+                    {pilares.map((item, indice) => (
                         <article
                             key={item.titulo}
-                            className="group rounded-2xl border border-gray-100 bg-white p-8 shadow-[0_4px_20px_rgba(6,20,12,0.05)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_14px_40px_rgba(27,156,133,0.12)]"
+                            className="group relative overflow-hidden rounded-3xl border border-white/70 bg-white/90 p-8 shadow-[0_18px_45px_rgba(6,20,12,0.08)] backdrop-blur-md transition-all duration-300 hover:-translate-y-1.5 hover:border-brand-200 hover:bg-white hover:shadow-[0_24px_55px_rgba(27,156,133,0.18)] md:p-10"
                         >
-                            <span className="mb-5 flex h-13 w-13 items-center justify-center rounded-full bg-brand-50 p-3 text-2xl text-brand-500 transition-colors group-hover:bg-brand-400 group-hover:text-white">
-                                <i className={item.icono} aria-hidden="true" />
+                            {/* Filete superior de marca */}
+                            <span
+                                className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-brand-400 via-brand-500 to-brand-600"
+                                aria-hidden="true"
+                            />
+
+                            {/* Número de marca como marca de agua */}
+                            <span
+                                className="pointer-events-none absolute -right-1 -top-5 select-none font-heading text-[6.5rem] font-extrabold leading-none text-brand-50 transition-colors duration-300 group-hover:text-brand-100"
+                                aria-hidden="true"
+                            >
+                                {String(indice + 1).padStart(2, "0")}
                             </span>
-                            <h3 className="mb-3 font-heading text-[1.3rem] font-bold text-ink-900">
-                                {item.titulo}
-                            </h3>
-                            <p className="text-[0.98rem] leading-[1.8] text-ink-500">{item.texto}</p>
+
+                            <div className="relative">
+                                <span className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-50 text-2xl text-brand-500 transition-colors duration-300 group-hover:bg-brand-400 group-hover:text-white">
+                                    <i className={item.icono} aria-hidden="true" />
+                                </span>
+
+                                <span className="mb-2 block text-[0.72rem] font-bold uppercase tracking-[3px] text-brand-400">
+                                    {item.etiqueta}
+                                </span>
+                                <h3 className="mb-3 font-heading text-[1.45rem] font-bold text-ink-900">
+                                    {item.titulo}
+                                </h3>
+                                <p className="max-w-[560px] text-[0.98rem] leading-[1.85] text-ink-500">
+                                    {item.texto}
+                                </p>
+                            </div>
                         </article>
                     ))}
-                </div>
-
-                {/* Experiencia / sectores atendidos */}
-                <div className="mt-10 rounded-2xl bg-brand-900 px-6 py-10 text-white md:px-12">
-                    <h3 className="mb-2 text-center font-heading text-[1.5rem] font-bold">
-                        Experiencia y presencia
-                    </h3>
-                    <p className="mx-auto mb-7 max-w-[720px] text-center text-[1rem] leading-[1.7] text-brand-50/85">
-                        Nuestros protocolos certificados y personal especializado protegen
-                        diariamente a organizaciones de múltiples sectores dentro y fuera de la
-                        Central:
-                    </p>
-                    <ul className="flex flex-wrap justify-center gap-3">
-                        {SECTORES.map((sector) => (
-                            <li
-                                key={sector}
-                                className="flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-[0.9rem] font-medium text-brand-50 transition-all duration-300 hover:border-brand-400 hover:bg-white/10"
-                            >
-                                <i className="pi pi-check-circle text-brand-400" aria-hidden="true" />
-                                {sector}
-                            </li>
-                        ))}
-                    </ul>
                 </div>
             </div>
         </section>

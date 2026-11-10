@@ -2,39 +2,37 @@ import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { irASeccion } from "./irASeccion";
 
-const MENU_ITEMS = [
-  { label: "Inicio", icon: "pi pi-home", section: "inicio" },
-  { label: "Quiénes somos", icon: "pi pi-id-card", section: "quienes-somos" },
-  { label: "Servicios", icon: "pi pi-user", section: "servicios" },
-  { label: "Contacto", icon: "pi pi-phone", section: "contacto" },
-];
+interface EnlaceMenu {
+  label: string;
+  icon: string;
+  ruta: string;
+  seccion?: string;
+}
 
-const MENU_EXTRA = [
-  { label: "Compromiso", icon: "pi pi-check", section: "beneficios" },
-  { label: "Relaciones de confianza", icon: "pi pi-users", section: "clientes" },
-  { label: "Testimonios", icon: "pi pi-comment", section: "testimonios" },
-  { label: "Legalidad", icon: "pi pi-shield", section: "cumplimiento" },
+const MENU_ITEMS: EnlaceMenu[] = [
+  { label: "Inicio", icon: "pi pi-home", ruta: "/home" },
+  { label: "Quiénes somos", icon: "pi pi-id-card", ruta: "/quienes_somos", seccion: "quienes-somos" },
+  { label: "Servicios", icon: "pi pi-user", ruta: "/servicios" },
+  { label: "Contacto", icon: "pi pi-phone", ruta: "/contacto" },
 ];
 
 export default function MobileMenu() {
   const navigate = useNavigate();
   const location = useLocation();
   const [abierto, setAbierto] = useState(false);
-  const [masAbierto, setMasAbierto] = useState(false);
 
   const cerrar = () => {
     setAbierto(false);
-    setMasAbierto(false);
   };
 
-  const irA = (section: string) => {
-    irASeccion(navigate, location.pathname, section);
+  const irA = (ruta: string, seccion?: string) => {
+    irASeccion(navigate, location.pathname, ruta, seccion);
     cerrar();
   };
 
   return (
     <>
-      {/* Botón hamburguesa: visible solo en tablet y celular (< 1024px) */}
+      {/* Botón hamburguesa: visible solo en tablet y celular (< 1250px) */}
       <button
         onClick={() => setAbierto(true)}
         className="fixed top-4 right-4 z-[1000] flex h-12 w-12 items-center justify-center bg-white/90 text-brand-900 lg:hidden"
@@ -78,8 +76,8 @@ export default function MobileMenu() {
 
             {MENU_ITEMS.map((item) => (
               <button
-                key={item.section}
-                onClick={() => irA(item.section)}
+                key={item.ruta}
+                onClick={() => irA(item.ruta, item.seccion)}
                 className="w-full flex items-left justify-start gap-4 px-5 py-4 text-white hover:bg-gold-400/10 hover:text-white transition-colors bg-brand-900"
               >
                 <i className={item.icon} />
@@ -87,37 +85,9 @@ export default function MobileMenu() {
               </button>
             ))}
 
-            {/* Desplegable con el resto de secciones */}
-            <button
-              onClick={() => setMasAbierto((previo) => !previo)}
-              className="w-full flex items-center justify-between gap-4 px-5 py-4 text-white hover:bg-gold-400/10 hover:text-white transition-colors bg-brand-900"
-              aria-expanded={masAbierto}
-            >
-              <span className="flex items-center gap-4">
-                <i className="pi pi-ellipsis-h" />
-                <span className="leading-tight">Más</span>
-              </span>
-              <i className={`pi ${masAbierto ? "pi-chevron-up" : "pi-chevron-down"} text-sm`} />
-            </button>
-
-            {masAbierto && (
-              <div className="flex flex-col border-l-2 border-gold-400/40 ml-5">
-                {MENU_EXTRA.map((item) => (
-                  <button
-                    key={item.section}
-                    onClick={() => irA(item.section)}
-                    className="w-full flex items-left justify-start gap-4 px-5 py-3 text-white hover:bg-gold-400/10 hover:text-white transition-colors bg-brand-900"
-                  >
-                    <i className={item.icon} />
-                    <span className="leading-tight">{item.label}</span>
-                  </button>
-                ))}
-              </div>
-            )}
-
             {/* Sección: Cotización */}
             <button
-              onClick={() => irA("contacto")}
+              onClick={() => irA("/contacto")}
               className="w-full flex items-center justify-center gap-3 px-3 py-6 text-base font-bold text-white bg-brand-900 hover:bg-navy-700 transition-colors"
             >
               <i className="pi pi-send" />
