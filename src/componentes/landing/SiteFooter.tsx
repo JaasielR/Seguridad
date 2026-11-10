@@ -135,21 +135,32 @@ const SiteFooter: React.FC = () => {
                         </div>
                         <div className="space-y-4 text-[0.92rem] leading-[1.8] text-ink-500">
                             <p>
-                                GRUPO SICAE es responsable del tratamiento y protección de los datos
-                                personales que usted proporcione a través de este sitio.
+                                GRUPO SICAE es responsable del tratamiento y protección de los datos personales que
+                                usted proporcione a través de este sitio web.
                             </p>
                             <p>
-                                Los datos recabados (nombre, empresa, teléfono, correo electrónico y
-                                mensaje) se utilizarán única y exclusivamente para atender su
-                                solicitud de información y contactarle respecto a nuestros servicios
-                                de seguridad privada. No serán compartidos con terceros sin su
-                                consentimiento.
+                                Los datos personales recabados, tales como nombre, empresa, teléfono, correo electrónico
+                                y mensaje, serán utilizados exclusivamente para atender solicitudes de información,
+                                proporcionar cotizaciones, dar seguimiento a consultas y establecer comunicación
+                                relacionada con nuestros servicios de seguridad privada.
                             </p>
                             <p>
-                                Usted puede ejercer sus derechos de acceso, rectificación,
-                                cancelación u oposición (ARCO) comunicándose al teléfono{" "}
-                                <strong className="text-brand-700">{EMPRESA.telefono}</strong> con el{" "}
-                                {EMPRESA.cargo}, {EMPRESA.director}.
+                                GRUPO SICAE no compartirá, transferirá ni divulgará sus datos personales a terceros
+                                sin su consentimiento, salvo en los casos previstos por la legislación aplicable.
+                            </p>
+                            <p>
+                                Para proteger su información, implementamos medidas administrativas, técnicas y
+                                físicas que ayudan a prevenir el acceso, uso o divulgación no autorizados.
+                            </p>
+                            <p>
+                                Usted podrá ejercer sus derechos de Acceso, Rectificación, Cancelación u Oposición
+                                (ARCO) mediante solicitud al correo electrónico{" "}
+                                <strong className="text-brand-700">{EMPRESA.email}</strong> o al teléfono{" "}
+                                <strong className="text-brand-700">{EMPRESA.telefono}</strong>.
+                            </p>
+                            <p>
+                                GRUPO SICAE podrá actualizar el presente Aviso de Privacidad cuando resulte necesario.
+                                Cualquier modificación será publicada en este sitio web.
                             </p>
                         </div>
                     </div>
