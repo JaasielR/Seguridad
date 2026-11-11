@@ -12,13 +12,13 @@ export const EMPRESA = {
     ubicacion: "Cobertura en distintas regiones",
     director: "Lic. Eusebio Ortega",
     cargo: "Director Operativo",
-    telefono: "5529188467",
+    telefono: "5511365612",
     // Número internacional para tel: del director operativo
-    telefonoInternacional: "525529188467",
+    telefonoInternacional: "525511365612",
     // WhatsApp de contacto (formato internacional para enlaces wa.me)
-    whatsapp: "5551852695",
-    whatsappInternacional: "525551852695",
-    email: "javier_9509@hotmail.com",
+    whatsapp: "5511365612",
+    whatsappInternacional: "525511365612",
+    email: "ortegaeusebio99@gmail.com",
     horario: "24/7 · Los 365 días del año",
 } as const;
 

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { EMPRESA } from "../../data/empresa";
 const Contacto: React.FC = () => {
     return (
         <div className="page-shell">
@@ -14,7 +14,7 @@ const Contacto: React.FC = () => {
                         <span className="flex-shrink-0 text-[2em]">📞</span>
                         <div>
                             <span className="mb-[5px] block text-[0.9em] tracking-wide text-ivory-100">Teléfono</span>
-                            <strong className="block text-[1.2em] font-bold text-gold-200">5529188467</strong>
+                            <strong className="block text-[1.2em] font-bold text-gold-200">{EMPRESA.telefono}</strong>
                         </div>
                     </div>
                     <div className="flex items-center gap-5 rounded-[10px] border border-gold-400/40 bg-navy-panel p-5 shadow-plate">
