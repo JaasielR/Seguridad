@@ -79,9 +79,7 @@ const MotopatrullasDetalle: React.FC = () => {
 
                             <div className="min-w-0">
                                 <h1 className="m-0 text-[clamp(2rem,5vw,5.4rem)] font-bold leading-[0.96] tracking-[-0.015em] text-[#041c36] [font-family:'Source_Sans_3','Source_Sans_Pro',sans-serif]">
-                                    Motopatrullas
-                                    <br />
-                                    DM 250
+                                    Motopatrullaje y Respuesta Rápida
                                 </h1>
 
                                 <p className="mt-[clamp(6px,0.6vw,12px)] text-[clamp(0.98rem,1.56vw,1.75rem)] font-bold leading-[1.15] text-[#0e8b87]">

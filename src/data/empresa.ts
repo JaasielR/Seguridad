@@ -51,15 +51,6 @@ export interface ServicioInfo {
 export const SERVICIOS: ServicioInfo[] = [
     {
         id: 1,
-        icono: "pi pi-video",
-        iconoImagen: "ref/1/cctv.png",
-        titulo: "Video Vigilancia CCTV",
-        resumen:
-            "Sistemas CCTV analógicos e IP con monitoreo 24/7 desde centro de control certificado, cámaras de alta resolución con visión nocturna e infrarroja.",
-        imagen: "public/ref/1/cctv.png",
-    },
-    {
-        id: 2,
         icono: "pi pi-building",
         iconoImagen: "ref/1/guardia.png",
         titulo: "Guardia Intramuros",
@@ -68,7 +59,7 @@ export const SERVICIOS: ServicioInfo[] = [
         imagen: "ref/1/guardia.png",
     },
     {
-        id: 3,
+        id: 2,
         icono: "pi pi-box",
         iconoImagen: "ref/1/custodia.png",
         titulo: "Custodia de Mercancía",
@@ -77,7 +68,7 @@ export const SERVICIOS: ServicioInfo[] = [
         imagen: "ref/1/custodia.png",
     },
     {
-        id: 4,
+        id: 3,
         icono: "pi pi-user",
         iconoImagen: "ref/1/personas.png",
         titulo: "Protección a Personas",
@@ -86,22 +77,31 @@ export const SERVICIOS: ServicioInfo[] = [
         imagen: "ref/1/personas.png",
     },
     {
-        id: 5,
+        id: 4,
         icono: "pi pi-car",
         iconoImagen: "ref/1/motopatrullas.png",
-        titulo: "Motopatrullas DM 250",
+        titulo: "Motopatrullaje y Respuesta Rápida",
         resumen:
             "Unidades motocicletas para patrullaje en andenes y zonas de carga, respuesta inmediata ante incidentes y prevención de robo a carga y transporte.",
         imagen: "ref/1/motopatrullas.png",
     },
     {
-        id: 6,
+        id: 5,
         icono: "pi pi-moon",
         iconoImagen: "ref/1/nocturnos.png",
         titulo: "Recorridos Nocturnos Perimetrales",
         resumen:
             "Recorridos constantes del perímetro, vigilancia de bardas y accesos, detección de personas sospechosas y bitácora de novedades cada hora con fotografías.",
         imagen: "ref/1/nocturnos.png",
+    },
+    {
+        id: 6,
+        icono: "pi pi-video",
+        iconoImagen: "ref/1/cctv.png",
+        titulo: "Video Vigilancia CCTV",
+        resumen:
+            "Sistemas CCTV analógicos e IP con monitoreo 24/7 desde centro de control certificado, cámaras de alta resolución con visión nocturna e infrarroja.",
+        imagen: "public/ref/1/cctv.png",
     },
 ];
 

@@ -30,22 +30,18 @@ const HeroSection: React.FC = () => {
                 <div className="max-w-[760px] animate-[fadeUp_0.9s_ease-out]">
                     {/* Lema tripartito (estilo GYPSE) */}
                     <div className="mb-6 flex flex-wrap items-center gap-x-3 gap-y-1 text-[0.9rem] font-semibold uppercase tracking-[3px] text-brand-100">
-                        {LEMA.map((palabra, i) => (
-                            <React.Fragment key={palabra}>
-                                {i > 0 && <span className="text-brand-400">·</span>}
-                                <span>{palabra}</span>
-                            </React.Fragment>
-                        ))}
+                        <span>Seguridad Integral, Custodia y Asistencia Especializada</span>
                     </div>
+
 
                     <h1 className="mb-6 font-display text-[2.6rem] font-extrabold leading-[1.1] text-white sm:text-[3.6rem] md:text-[4.2rem]">
                         Protegemos lo que más importa.
                     </h1>
 
                     <p className="mb-8 max-w-[600px] text-[1.15rem] leading-relaxed text-brand-50/90">
-                        Soluciones de seguridad privada diseñadas para proteger personas,
-                        instalaciones y operaciones con profesionalismo, supervisión y atención
-                        cercana, con un gran alcance en distintas regiones.
+                        Diseñamos soluciones de seguridad privada para proteger personas, instalaciones y operaciones.
+                        Combinamos personal capacitado, supervisión constante y atención oportuna para responder a
+                        las necesidades de cada cliente.
                     </p>
 
                     {/* Oferta de diagnóstico sin costo */}

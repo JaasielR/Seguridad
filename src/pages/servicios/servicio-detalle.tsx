@@ -30,17 +30,17 @@ const ServicioDetalle: React.FC = () => {
 
     let detalle: React.ReactNode;
 
-    if (id === "1" || id === "7") {
+    if (id === "6") {
         detalle = <VideoVigilanciaDetalle />;
-    } else if (id === "2") {
+    } else if (id === "1") {
         detalle = <GuardiaIntramurosDetalle />;
-    } else if (id === "3" || id === "11") {
+    } else if (id === "2") {
         detalle = <CustodiaMercanciaDetalle />;
-    } else if (id === "4") {
+    } else if (id === "3") {
         detalle = <ProteccionPersonasDetalle />;
-    } else if (id === "5" || id === "8") {
+    } else if (id === "4") {
         detalle = <MotopatrullasDetalle />;
-    } else if (id === "6" || id === "9") {
+    } else if (id === "5") {
         detalle = <RecorridosNocturnosDetalle />;
     } else {
         detalle = (

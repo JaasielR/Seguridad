@@ -70,8 +70,7 @@ const ServiciosSection: React.FC = () => {
 
                     <p className="mt-[30px] max-w-[452px] text-[1.09rem] leading-[1.8] text-[#4d5a63]">
                         Diseñamos esquemas de protección de acuerdo con los riesgos, las
-                        instalaciones y las necesidades de cada cliente y operación, en
-                        cualquier región.
+                        instalaciones y las necesidades de cada cliente y operación.
                     </p>
                 </div>
 

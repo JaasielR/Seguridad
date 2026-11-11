@@ -50,7 +50,7 @@ const SiteFooter: React.FC = () => {
                     <ul className="flex flex-col gap-3 text-[0.9rem] text-brand-50/70">
                         <li className="flex items-start gap-3">
                             <i className="pi pi-map-marker mt-0.5 text-brand-400" aria-hidden="true" />
-                            <span>Gran alcance y presencia en distintas regiones</span>
+                            <span>Edo. México, México</span>
                         </li>
                         <li className="flex items-center gap-3">
                             <i className="pi pi-phone text-brand-400" aria-hidden="true" />
@@ -105,7 +105,7 @@ const SiteFooter: React.FC = () => {
 
             {/* Barra de derechos reservados */}
             <div className="border-t border-white/10 py-5 text-center text-[0.82rem] text-brand-50/50">
-                © {anio} GRUPO SICAE. Todos los derechos reservados.
+                © {anio} GRUPO SICAE - Seguridad Integral, Custodia y Asistencia Especializada. Todos los derechos reservados.
             </div>
 
             {/* Modal de aviso de privacidad */}

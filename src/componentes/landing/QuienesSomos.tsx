@@ -15,14 +15,14 @@ const QuienesSomos: React.FC = () => {
             etiqueta: "Nuestra razón de ser",
             titulo: "Misión",
             texto:
-                "Garantizar la seguridad y protección de nuestros clientes mediante soluciones integrales de seguridad privada, apoyadas en personal confiable, capacitación continua y excelencia operativa, contribuyendo al desarrollo seguro de sus actividades comerciales.",
+                "Brindar servicios de seguridad privada confiables y profesionales, mediante personal capacitado, supervisión constante y estrategias adaptadas a cada cliente, contribuyendo a proteger su patrimonio y garantizar la continuidad de sus operaciones.",
         },
         {
             icono: "pi pi-compass",
             etiqueta: "Hacia dónde vamos",
             titulo: "Visión",
             texto:
-                "Ser la empresa líder en seguridad privada en México, reconocida por nuestra confianza, innovación y excelencia operativa en la prestación de servicios.",
+                "Consolidarnos como una empresa referente en seguridad privada en México, reconocida por la confianza de nuestros clientes, la calidad de nuestro servicio, la preparación de nuestro personal y nuestra capacidad para evolucionar ante los nuevos desafíos de seguridad.",
         },
     ];
 
@@ -61,12 +61,12 @@ const QuienesSomos: React.FC = () => {
                         <span className="text-brand-700">proteger lo que más importa.</span>
                     </h2>
                     <p className="text-[1.05rem] leading-[1.9] text-ink-500">
-                        <strong className="text-brand-700">Grupo SICAE</strong> es una empresa mexicana especializada en
-                        seguridad privada. Con presencia en distintas regiones y un gran alcance operativo,
-                        integramos personal altamente capacitado, tecnología de vigilancia y protocolos
-                        operativos certificados para
-                        proteger a las personas, las instalaciones y las mercancías de nuestros clientes. Ofrecemos
-                        soluciones a la medida, respuesta oportuna y acompañamiento permanente los 365 días del año.
+                        <strong className="text-brand-700">Grupo SICAE</strong> es una empresa mexicana especializada
+                        en servicios de seguridad privada. Trabajamos para proteger personas, instalaciones y bienes mediante
+                        personal capacitado, supervisión operativa y soluciones de seguridad adaptadas a las necesidades de cada cliente.
+                        <br/>
+                        Nuestro compromiso es brindar confianza, atención oportuna y un servicio profesional, respaldado
+                        por una operación responsable y acompañamiento permanente los 365 días del año.
                     </p>
 
                     {/* Chips de valores (estilo GYPSE) */}
