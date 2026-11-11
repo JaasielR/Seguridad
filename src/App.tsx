@@ -2,7 +2,7 @@ import Inicio from "./pages/inicio/inicio";
 import Title from "./componentes/title";
 import DesktopMenu from "./componentes/desktopMenu";
 import MobileMenu from "./componentes/menu";
-import { Routes, Route, useNavigate, useLocation, Navigate } from "react-router-dom";
+import { Routes, Route, useNavigate, useLocation, Navigate, Link } from "react-router-dom";
 import Servicios from "./pages/servicios/servicios";
 import ServicioDetalle from "./pages/servicios/servicio-detalle";
 import VideoVigilancia from "./pages/video-vigilancia/video-vigilancia";
@@ -35,7 +35,14 @@ function App() {
                 <div className="flex w-full items-center justify-between gap-3 px-4 py-3 sm:px-6 xl:px-10">
                     <div className="flex items-center">
                         <h1 className="m-0">
-                            <Title />
+                            <Link
+                                to="/home"
+                                aria-label="Grupo SICAE, ir al inicio"
+                                title="Ir al inicio"
+                                className="inline-flex transition-opacity duration-200 hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 focus-visible:ring-offset-4"
+                            >
+                                <Title />
+                            </Link>
                         </h1>
                     </div>
                     <div className="flex flex-1 items-center justify-end gap-3">

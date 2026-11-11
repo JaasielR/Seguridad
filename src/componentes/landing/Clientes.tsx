@@ -150,10 +150,10 @@ const Clientes: React.FC = () => {
                                 role="group"
                                 aria-roledescription="diapositiva"
                                 aria-label={`${indice + 1} de ${total}: ${sector.nombre}`}
-                                className="group relative w-[82%] shrink-0 snap-start overflow-hidden rounded-2xl bg-brand-900 shadow-[0_14px_40px_rgba(6,20,12,0.14)] ring-1 ring-black/5 transition-transform duration-300 hover:-translate-y-1 sm:w-[46%] md:w-[31.5%]"
+                                className="group relative w-[86%] shrink-0 snap-start overflow-hidden rounded-2xl bg-brand-900 shadow-[0_14px_40px_rgba(6,20,12,0.14)] ring-1 ring-black/5 transition-transform duration-300 hover:-translate-y-1 sm:w-[47.5%] md:w-[48.7%]"
                             >
                                 {/* Imagen del sector (o tarjeta de marca si falta) */}
-                                <div className="aspect-[4/5] w-full">
+                                <div className="aspect-[3/2] w-full">
                                     {sector.imagen ? (
                                         <img
                                             src={asset(sector.imagen)}

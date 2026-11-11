@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { LEMA, whatsappLink } from "../../data/empresa";
+import { whatsappLink } from "../../data/empresa";
 
 /**
  * HERO principal (estilo referencia GYPSE): imagen de fondo con velo verde
